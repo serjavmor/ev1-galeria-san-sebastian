@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Aurora | Contacto</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Galería Aurora</h1>
+    <p class="lema">Arte que se mira de cerca</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contáctanos</h2>
+    <p>Completa el formulario y te responderemos dentro de 48 horas hábiles. Todos los campos son obligatorios.</p>
+
+    <form action="#" method="post">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej.: Camila Rojas" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="nombre@correo.cl" required>
+
+      <label for="tipo">Tipo de solicitud</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="compra">Compra</option>
+        <option value="consulta">Consulta</option>
+        <option value="venta">Venta</option>
+      </select>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué obra te interesa o qué necesitas" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <section>
+      <h2>Otros datos de contacto</h2>
+      <address>
+        Dirección: Avenida Brasil 1250, Valparaíso, Chile<br>
+        Teléfono: <a href="tel:+56322345678">+56 32 234 5678</a><br>
+        Horario: lunes a viernes, de 10:00 a 18:00
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <p>Galería Aurora · Valparaíso, Chile</p>
+  </footer>
+</body>
+</html>
