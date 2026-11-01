@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Escribe a Galería Aurora para comprar, vender o tasar una obra. Avenida Brasil 1250, Valparaíso.">
   <title>Galería Aurora | Contacto</title>
-  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fuentes/epilogue-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -96,6 +96,14 @@
               <option value="Uvas, de Celia Castro"></option>
               <option value="Paisaje de Lo Contador, de Alberto Valenzuela Llanos"></option>
               <option value="Rosas y campánulas, de Aurora Mira"></option>
+              <option value="La escuadra chilena en 1879, de Thomas Somerscales"></option>
+              <option value="La zamacueca, de Manuel Antonio Caro"></option>
+              <option value="El huaso y la lavandera, de Mauricio Rugendas"></option>
+              <option value="La lectura, de Cosme San Martín"></option>
+              <option value="Zamacueca, de Arturo Gordon"></option>
+              <option value="La riña, de Arturo Gordon"></option>
+              <option value="Pataguas, de Agustín Abarca"></option>
+              <option value="Alameda de las Delicias, de Alberto Orrego Luco"></option>
             </datalist>
             <span class="ayuda" id="obra-ayuda">Empieza a escribir y elige de la lista, o escribe el nombre de otra obra.</span>
           </div>
@@ -117,7 +125,6 @@
 
         <div class="enviar">
           <button class="boton" type="submit">Enviar solicitud</button>
-          <p class="chico">Te respondemos en 48 horas hábiles.</p>
         </div>
       </form>
 
@@ -145,36 +152,49 @@
 
     <section class="en-sala" aria-labelledby="titulo-preguntadas">
       <div class="grid entra">
-        <h2 id="titulo-preguntadas">Las más consultadas</h2>
+        <div class="acciones">
+          <h2 id="titulo-preguntadas">Las más consultadas</h2>
+          <a class="enlace-flecha" href="galeria.html">Ver la colección</a>
+        </div>
       </div>
-      <ul class="banda">
-        <li>
+      <ul class="fila-obras">
+        <li style="--r: 1.333">
           <a href="galeria.html#paseo-atkinson">
             <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
               alt="El paseo Atkinson, de Alfredo Helsby: una niña con un aro en un paseo soleado sobre la bahía">
           </a>
-          <p class="banda-titulo" aria-hidden="true">El paseo Atkinson, Alfredo Helsby</p>
+          <p><strong>El paseo Atkinson</strong>Alfredo Helsby</p>
         </li>
-        <li>
+        <li style="--r: 0.725">
           <a href="galeria.html#sevillana">
             <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
               alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer con chal rojo y un abanico">
           </a>
+          <p><strong>La sevillana</strong>Alfredo Valenzuela Puelma</p>
         </li>
-        <li>
+        <li style="--r: 1.328">
+          <a href="galeria.html#lectura">
+            <img src="img/san-martin-lectura.jpg" width="1040" height="783" loading="lazy"
+              alt="La lectura, de Cosme San Martín: una familia escucha a una joven que lee en un salón">
+          </a>
+          <p><strong>La lectura</strong>Cosme San Martín</p>
+        </li>
+        <li style="--r: 1.459">
           <a href="galeria.html#marina">
             <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
               alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas y olas en la orilla">
           </a>
+          <p><strong>Marina de Valparaíso</strong>Alberto Valenzuela Llanos</p>
         </li>
-        <li>
+        <li style="--r: 0.699">
           <a href="galeria.html#rosas">
             <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
               alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas y campánulas">
           </a>
+          <p><strong>Rosas y campánulas</strong>Aurora Mira</p>
         </li>
       </ul>
-      <p class="banda-pie">Si te interesa una, anótala en el campo «Obra de interés» del formulario.</p>
+      <div class="grid"><p class="chico">Si te interesa una, anótala en el campo «Obra de interés» del formulario.</p></div>
     </section>
   </main>
 

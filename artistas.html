@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Biografías de los nueve artistas chilenos de la colección de Galería Aurora, en Valparaíso.">
+  <meta name="description" content="Biografías de los quince artistas de la colección de Galería Aurora, en Valparaíso.">
   <title>Galería Aurora | Artistas</title>
-  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fuentes/epilogue-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -29,24 +29,50 @@
   <main id="contenido">
     <section class="cabecera grid entra" aria-labelledby="titulo-artistas">
       <h1 id="titulo-artistas">Artistas</h1>
-      <p>Nueve pintores y pintoras que formaron la pintura chilena entre 1870 y 1930. Cuatro de ellos nacieron en Valparaíso o vivieron aquí.</p>
+      <p>Quince pintores y pintoras que formaron la pintura chilena entre 1835 y 1930. Varios de ellos nacieron o vivieron en Valparaíso.</p>
     </section>
 
-    <section class="nomina grid entra" aria-label="Lista de artistas">
-      <img class="nomina-foto" src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720"
-        alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer con chal rojo mira hacia arriba con un abanico en la mano">
-      <p class="nomina-rotulo">Nómina</p>
+    <section class="nomina grid entra" aria-labelledby="titulo-nomina">
+      <h2 id="titulo-nomina" class="oculto">Lista de artistas, por año de nacimiento</h2>
       <ul>
+        <li><a href="#rugendas">Mauricio Rugendas <span>1802–1858</span></a></li>
+        <li><a href="#caro">Manuel Antonio Caro <span>1835–1903</span></a></li>
         <li><a href="#somerscales">Thomas Somerscales <span>1842–1927</span></a></li>
-        <li><a href="#helsby">Alfredo Helsby <span>1862–1933</span></a></li>
-        <li><a href="#gonzalez">Juan Francisco González <span>1853–1933</span></a></li>
-        <li><a href="#valenzuela-llanos">Alberto Valenzuela Llanos <span>1869–1925</span></a></li>
         <li><a href="#lira">Pedro Lira <span>1845–1912</span></a></li>
+        <li><a href="#san-martin">Cosme San Martín <span>1849–1906</span></a></li>
+        <li><a href="#gonzalez">Juan Francisco González <span>1853–1933</span></a></li>
+        <li><a href="#orrego-luco">Alberto Orrego Luco <span>1854–1931</span></a></li>
         <li><a href="#valenzuela-puelma">Alfredo Valenzuela Puelma <span>1856–1909</span></a></li>
         <li><a href="#magdalena-mira">Magdalena Mira <span>1859–1930</span></a></li>
-        <li><a href="#aurora-mira">Aurora Mira <span>1863–1939</span></a></li>
         <li><a href="#celia-castro">Celia Castro <span>1860–1930</span></a></li>
+        <li><a href="#helsby">Alfredo Helsby <span>1862–1933</span></a></li>
+        <li><a href="#aurora-mira">Aurora Mira <span>1863–1939</span></a></li>
+        <li><a href="#valenzuela-llanos">Alberto Valenzuela Llanos <span>1869–1925</span></a></li>
+        <li><a href="#abarca">Agustín Abarca <span>1882–1953</span></a></li>
+        <li><a href="#gordon">Arturo Gordon <span>1883–1944</span></a></li>
       </ul>
+    </section>
+
+    <section class="artista grid entra" id="rugendas" aria-labelledby="n-rugendas">
+      <img src="img/rugendas-huaso-lavandera.jpg" width="772" height="1024" loading="lazy"
+        alt="Detalle de El huaso y la lavandera, de Mauricio Rugendas: un huaso de manta roja a caballo">
+      <div class="artista-texto">
+        <h2 id="n-rugendas">Mauricio Rugendas</h2>
+        <p class="vida">Augsburgo, Alemania, 1802 · Alemania, 1858</p>
+        <p>Pintor viajero alemán que recorrió América y vivió varios años en Chile, en la década de 1830. Retrató huasos, fiestas y paisajes del campo, y sus cuadros son de las primeras imágenes de la vida cotidiana del país.</p>
+        <p><a class="enlace-flecha" href="galeria.html#huaso">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="caro" aria-labelledby="n-caro">
+      <img src="img/caro-zamacueca.jpg" width="800" height="600" loading="lazy"
+        alt="Detalle de La zamacueca, de Manuel Antonio Caro: parejas bailando en una fonda">
+      <div class="artista-texto">
+        <h2 id="n-caro">Manuel Antonio Caro</h2>
+        <p class="vida">Ancud, 1835 · Valparaíso, 1903</p>
+        <p>Nació en Chiloé y murió en Valparaíso. Es uno de los grandes pintores costumbristas chilenos: en cuadros como La zamacueca retrató las fiestas y los bailes populares del siglo XIX.</p>
+        <p><a class="enlace-flecha" href="galeria.html#zamacueca-caro">Ver su obra en la colección</a></p>
+      </div>
     </section>
 
     <section class="artista grid entra" id="somerscales" aria-labelledby="n-somerscales">
@@ -56,40 +82,7 @@
         <h2 id="n-somerscales">Thomas Somerscales</h2>
         <p class="vida">Hull, Inglaterra, 1842 · Inglaterra, 1927</p>
         <p>Marino y profesor inglés que vivió en Chile de 1869 a 1892. Se hizo conocido por sus batallas navales y por sus vistas del puerto de Valparaíso, que siguió pintando después de volver a Inglaterra.</p>
-        <p><a href="galeria.html#somerscales">Ver su obra en la colección</a></p>
-      </div>
-    </section>
-
-    <section class="artista grid entra" id="helsby" aria-labelledby="n-helsby">
-      <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
-        alt="Detalle de El paseo Atkinson, de Alfredo Helsby: una niña con un aro en un paseo soleado">
-      <div class="artista-texto">
-        <h2 id="n-helsby">Alfredo Helsby</h2>
-        <p class="vida">Valparaíso, 1862 · Santiago, 1933</p>
-        <p>Nació en Valparaíso y salía a pintar al aire libre con Juan Francisco González. Se le considera uno de los grandes paisajistas chilenos por su manera de trabajar la luz y el color.</p>
-        <p><a href="galeria.html#paseo-atkinson">Ver su obra en la colección</a></p>
-      </div>
-    </section>
-
-    <section class="artista grid entra" id="gonzalez" aria-labelledby="n-gonzalez">
-      <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy"
-        alt="Detalle de Valparaíso, de Juan Francisco González: veleros anclados en la bahía">
-      <div class="artista-texto">
-        <h2 id="n-gonzalez">Juan Francisco González</h2>
-        <p class="vida">Santiago, 1853 · Santiago, 1933</p>
-        <p>Uno de los cuatro grandes maestros de la pintura chilena. Pintaba rápido, con pinceladas sueltas, y dejó miles de cuadros de flores, calles y paisajes.</p>
-        <p><a href="galeria.html#valparaiso-gonzalez">Ver su obra en la colección</a></p>
-      </div>
-    </section>
-
-    <section class="artista grid entra" id="valenzuela-llanos" aria-labelledby="n-valenzuela-llanos">
-      <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
-        alt="Detalle de Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas y olas en la orilla">
-      <div class="artista-texto">
-        <h2 id="n-valenzuela-llanos">Alberto Valenzuela Llanos</h2>
-        <p class="vida">San Fernando, 1869 · Santiago, 1925</p>
-        <p>Paisajista y otro de los cuatro grandes maestros. Se estima que pintó más de mil cuadros, en los que se nota la llegada del impresionismo a la pintura chilena.</p>
-        <p><a href="galeria.html#marina">Ver sus obras en la colección</a></p>
+        <p><a class="enlace-flecha" href="galeria.html#somerscales">Ver su obra en la colección</a></p>
       </div>
     </section>
 
@@ -100,7 +93,40 @@
         <h2 id="n-lira">Pedro Lira</h2>
         <p class="vida">Santiago, 1845 · Santiago, 1912</p>
         <p>Pintor y crítico de arte. Organizó algunas de las primeras exposiciones de arte en Chile y fue maestro de Celia Castro, la primera mujer en estudiar pintura de forma profesional en el país.</p>
-        <p><a href="galeria.html#canteros">Ver su obra en la colección</a></p>
+        <p><a class="enlace-flecha" href="galeria.html#canteros">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="san-martin" aria-labelledby="n-san-martin">
+      <img src="img/san-martin-lectura.jpg" width="1040" height="783" loading="lazy"
+        alt="Detalle de La lectura, de Cosme San Martín: una familia reunida en un salón">
+      <div class="artista-texto">
+        <h2 id="n-san-martin">Cosme San Martín</h2>
+        <p class="vida">Valparaíso, 1849 · Santiago, 1906</p>
+        <p>Nació en Valparaíso y estudió en la Academia de Pintura de Santiago. La lectura, de 1874, muestra a una familia reunida en su salón y es una de sus obras más conocidas.</p>
+        <p><a class="enlace-flecha" href="galeria.html#lectura">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="gonzalez" aria-labelledby="n-gonzalez">
+      <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy"
+        alt="Detalle de Valparaíso, de Juan Francisco González: veleros anclados en la bahía">
+      <div class="artista-texto">
+        <h2 id="n-gonzalez">Juan Francisco González</h2>
+        <p class="vida">Santiago, 1853 · Santiago, 1933</p>
+        <p>Uno de los cuatro grandes maestros de la pintura chilena. Pintaba rápido, con pinceladas sueltas, y dejó miles de cuadros de flores, calles y paisajes.</p>
+        <p><a class="enlace-flecha" href="galeria.html#valparaiso-gonzalez">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="orrego-luco" aria-labelledby="n-orrego-luco">
+      <img src="img/orrego-luco-alameda.jpg" width="768" height="448" loading="lazy"
+        alt="Detalle de Alameda de las Delicias, de Alberto Orrego Luco: una avenida con árboles al atardecer">
+      <div class="artista-texto">
+        <h2 id="n-orrego-luco">Alberto Orrego Luco</h2>
+        <p class="vida">Valparaíso, 1854 · 1931</p>
+        <p>Nació en Valparaíso y vivió buena parte de su vida en Europa. Pintó paisajes de Chile y de Italia, con una luz suave de atardecer, como en su vista de la Alameda de las Delicias.</p>
+        <p><a class="enlace-flecha" href="galeria.html#alameda">Ver su obra en la colección</a></p>
       </div>
     </section>
 
@@ -111,7 +137,7 @@
         <h2 id="n-valenzuela-puelma">Alfredo Valenzuela Puelma</h2>
         <p class="vida">Valparaíso, 1856 · Villejuif, Francia, 1909</p>
         <p>Nació en Valparaíso y fue pionero en pintar desnudos en Chile. De los cuatro grandes maestros, es el que mejor representa la perfección formal de la pintura académica.</p>
-        <p><a href="galeria.html#sevillana">Ver su obra en la colección</a></p>
+        <p><a class="enlace-flecha" href="galeria.html#sevillana">Ver su obra en la colección</a></p>
       </div>
     </section>
 
@@ -122,18 +148,7 @@
         <h2 id="n-magdalena-mira">Magdalena Mira</h2>
         <p class="vida">Santiago, 1859 · 1930</p>
         <p>Pintora y escultora. Junto con su hermana Aurora, se la considera una de las primeras mujeres artistas de Chile y una figura clave de la pintura del siglo XIX en Latinoamérica.</p>
-        <p><a href="galeria.html#bordadora">Ver su obra en la colección</a></p>
-      </div>
-    </section>
-
-    <section class="artista grid entra" id="aurora-mira" aria-labelledby="n-aurora-mira">
-      <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
-        alt="Detalle de Rosas y campánulas, de Aurora Mira: rosas rosadas y campánulas lilas">
-      <div class="artista-texto">
-        <h2 id="n-aurora-mira">Aurora Mira</h2>
-        <p class="vida">Santiago, 1863 · Santiago, 1939</p>
-        <p>Pintora. Con su hermana Magdalena abrió camino a las mujeres en la pintura chilena, en una época en que el arte se consideraba un oficio de hombres.</p>
-        <p><a href="galeria.html#rosas">Ver su obra en la colección</a></p>
+        <p><a class="enlace-flecha" href="galeria.html#bordadora">Ver su obra en la colección</a></p>
       </div>
     </section>
 
@@ -144,7 +159,62 @@
         <h2 id="n-celia-castro">Celia Castro</h2>
         <p class="vida">Valparaíso, 1860 · Valparaíso, 1930</p>
         <p>Fue la primera mujer en estudiar pintura profesional en Chile y alumna de Pedro Lira. Se la recuerda por sus registros melancólicos de la vida cotidiana.</p>
-        <p><a href="galeria.html#uvas">Ver su obra en la colección</a></p>
+        <p><a class="enlace-flecha" href="galeria.html#uvas">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="helsby" aria-labelledby="n-helsby">
+      <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
+        alt="Detalle de El paseo Atkinson, de Alfredo Helsby: una niña con un aro en un paseo soleado">
+      <div class="artista-texto">
+        <h2 id="n-helsby">Alfredo Helsby</h2>
+        <p class="vida">Valparaíso, 1862 · Santiago, 1933</p>
+        <p>Nació en Valparaíso y salía a pintar al aire libre con Juan Francisco González. Se le considera uno de los grandes paisajistas chilenos por su manera de trabajar la luz y el color.</p>
+        <p><a class="enlace-flecha" href="galeria.html#paseo-atkinson">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="aurora-mira" aria-labelledby="n-aurora-mira">
+      <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+        alt="Detalle de Rosas y campánulas, de Aurora Mira: rosas rosadas y campánulas lilas">
+      <div class="artista-texto">
+        <h2 id="n-aurora-mira">Aurora Mira</h2>
+        <p class="vida">Santiago, 1863 · Santiago, 1939</p>
+        <p>Pintora. Con su hermana Magdalena abrió camino a las mujeres en la pintura chilena, en una época en que el arte se consideraba un oficio de hombres.</p>
+        <p><a class="enlace-flecha" href="galeria.html#rosas">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="valenzuela-llanos" aria-labelledby="n-valenzuela-llanos">
+      <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
+        alt="Detalle de Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas y olas en la orilla">
+      <div class="artista-texto">
+        <h2 id="n-valenzuela-llanos">Alberto Valenzuela Llanos</h2>
+        <p class="vida">San Fernando, 1869 · Santiago, 1925</p>
+        <p>Paisajista y otro de los cuatro grandes maestros. Se estima que pintó más de mil cuadros, en los que se nota la llegada del impresionismo a la pintura chilena.</p>
+        <p><a class="enlace-flecha" href="galeria.html#marina">Ver sus obras en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="abarca" aria-labelledby="n-abarca">
+      <img src="img/abarca-pataguas.jpg" width="496" height="456" loading="lazy"
+        alt="Detalle de Pataguas, de Agustín Abarca: árboles de troncos torcidos en tonos ocres">
+      <div class="artista-texto">
+        <h2 id="n-abarca">Agustín Abarca</h2>
+        <p class="vida">Talca, 1882 · Santiago, 1953</p>
+        <p>Paisajista nacido en Talca. Pintó sobre todo árboles y bosques, con tonos terrosos y pinceladas tranquilas, como en Pataguas, de 1930.</p>
+        <p><a class="enlace-flecha" href="galeria.html#pataguas">Ver su obra en la colección</a></p>
+      </div>
+    </section>
+
+    <section class="artista grid entra" id="gordon" aria-labelledby="n-gordon">
+      <img src="img/gordon-zamacueca.jpg" width="1200" height="867" loading="lazy"
+        alt="Detalle de Zamacueca, de Arturo Gordon: músicos y una pareja bailando en un patio">
+      <div class="artista-texto">
+        <h2 id="n-gordon">Arturo Gordon</h2>
+        <p class="vida">Casablanca, 1883 · Valparaíso, 1944</p>
+        <p>Pintor de la llamada Generación del Trece. Retrató escenas populares, fiestas y bailes con colores intensos y pincelada suelta, como en Zamacueca y La riña.</p>
+        <p><a class="enlace-flecha" href="galeria.html#zamacueca-gordon">Ver sus obras en la colección</a></p>
       </div>
     </section>
   </main>

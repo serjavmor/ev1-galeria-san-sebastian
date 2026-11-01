@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Colección de Galería Aurora: diez pinturas chilenas de 1870 a 1930, de Somerscales, Helsby, González, Lira, Valenzuela Puelma, las hermanas Mira y Celia Castro.">
+  <meta name="description" content="Colección de Galería Aurora: dieciocho pinturas chilenas de 1835 a 1930, ordenadas en cuatro salas: la bahía, las costumbres, las figuras y la naturaleza.">
   <title>Galería Aurora | Galería</title>
-  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fuentes/epilogue-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -29,134 +29,404 @@
   <main id="contenido">
     <section class="cabecera grid entra" aria-labelledby="titulo-galeria">
       <h1 id="titulo-galeria">La colección</h1>
-      <p>Diez pinturas chilenas de 1870 a 1930, ordenadas en tres salas: la bahía, las figuras y la naturaleza. Todas se pueden ver en Avenida Brasil 1250.</p>
+      <p>Dieciocho pinturas chilenas de 1835 a 1930, en cuatro salas: la bahía, las costumbres, las figuras y la naturaleza. Haz clic en una obra para verla en grande.</p>
     </section>
 
-    <section class="sala grid entra" aria-label="Obras de la colección">
-      <h2>La bahía</h2>
+    <section class="coleccion grid" aria-labelledby="titulo-obras">
+      <h2 id="titulo-obras" class="oculto">Obras de la colección</h2>
+      <fieldset class="filtros">
+        <legend class="oculto">Mostrar obras por sala</legend>
+        <input type="radio" name="sala" id="f-todas" value="todas" checked>
+        <label for="f-todas">Todas <span>18</span></label>
+        <input type="radio" name="sala" id="f-bahia" value="bahia">
+        <label for="f-bahia">La bahía <span>5</span></label>
+        <input type="radio" name="sala" id="f-costumbres" value="costumbres">
+        <label for="f-costumbres">Costumbres <span>5</span></label>
+        <input type="radio" name="sala" id="f-figuras" value="figuras">
+        <label for="f-figuras">Figuras <span>3</span></label>
+        <input type="radio" name="sala" id="f-naturaleza" value="naturaleza">
+        <label for="f-naturaleza">Naturaleza <span>5</span></label>
+      </fieldset>
 
-      <figure class="obra obra-ancha" id="somerscales">
-        <img src="img/somerscales-valparaiso.jpg" width="1200" height="766"
-          alt="Valparaíso, de Thomas Somerscales: vista desde los cerros al atardecer, con la ciudad y los barcos de la bahía bajo una cordillera rosada">
-        <figcaption>
-          <strong>Valparaíso</strong>
-          Thomas Somerscales · 1897 · Óleo sobre tela
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-a vertical" id="paseo-atkinson">
-        <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
-          alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
-        <figcaption>
-          <strong>El paseo Atkinson</strong>
-          Alfredo Helsby · 1896 · Óleo sobre tela
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-b horizontal" id="marina">
-        <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
-          alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
-        <figcaption>
-          <strong>Marina de Valparaíso</strong>
-          Alberto Valenzuela Llanos · antes de 1925 · Óleo sobre tela
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-c horizontal" id="valparaiso-gonzalez">
-        <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy"
-          alt="Valparaíso, de Juan Francisco González: la bahía en calma con veleros anclados frente a los cerros, en tonos claros de rosa y gris">
-        <figcaption>
-          <strong>Valparaíso</strong>
-          Juan Francisco González · antes de 1933 · Óleo
-        </figcaption>
-      </figure>
-
-      <h2>Las figuras</h2>
-
-      <figure class="obra obra-a vertical" id="sevillana">
-        <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
-          alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer de cabello negro con un chal rojo, sentada de perfil, mira hacia arriba con un abanico en la mano">
-        <figcaption>
-          <strong>La sevillana</strong>
-          Alfredo Valenzuela Puelma · 1890 · Óleo sobre tela
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-b horizontal" id="canteros">
-        <img src="img/lira-los-canteros.jpg" width="1070" height="646" loading="lazy"
-          alt="Los canteros, de Pedro Lira: hombres mueven bloques de piedra con una carretilla y una palanca junto a un muro, bajo el sol">
-        <figcaption>
-          <strong>Los canteros</strong>
-          Pedro Lira · sin fecha · Óleo sobre tela
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-c vertical" id="bordadora">
-        <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
-          alt="La bordadora, de Magdalena Mira: una joven de vestido blanco, sentada de perfil, borda una tela negra con flores en un salón con velas y rosas">
-        <figcaption>
-          <strong>La bordadora</strong>
-          Magdalena Mira · antes de 1930 · Óleo sobre tela
-        </figcaption>
-      </figure>
-
-      <h2>La naturaleza</h2>
-
-      <figure class="obra obra-d vertical" id="uvas">
-        <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
-          alt="Uvas, de Celia Castro: un racimo de uvas negras cuelga de una parra entre hojas verdes">
-        <figcaption>
-          <strong>Uvas</strong>
-          Celia Castro · antes de 1930 · Óleo
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-c horizontal" id="lo-contador">
-        <img src="img/valenzuela-llanos-lo-contador.jpg" width="652" height="365" loading="lazy"
-          alt="Paisaje de Lo Contador, de Alberto Valenzuela Llanos: árboles frondosos sobre un prado verde bajo un cielo nublado">
-        <figcaption>
-          <strong>Paisaje de Lo Contador</strong>
-          Alberto Valenzuela Llanos · sin fecha · Óleo
-        </figcaption>
-      </figure>
-
-      <figure class="obra obra-b vertical" id="rosas">
-        <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
-          alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
-        <figcaption>
-          <strong>Rosas y campánulas</strong>
-          Aurora Mira · sin fecha · Óleo sobre tela, 53 × 38 cm
-        </figcaption>
-      </figure>
+      <div class="muro">
+        <figure class="obra" id="somerscales" data-sala="bahia">
+          <a href="#ver-somerscales">
+            <img src="img/somerscales-valparaiso.jpg" width="1200" height="766"
+              alt="Valparaíso, de Thomas Somerscales: vista desde los cerros al atardecer, con la ciudad y los barcos de la bahía bajo una cordillera rosada">
+          </a>
+          <figcaption><strong>Valparaíso</strong>Thomas Somerscales · 1897</figcaption>
+        </figure>
+        <figure class="obra" id="sevillana" data-sala="figuras">
+          <a href="#ver-sevillana">
+            <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720"
+              alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer de cabello negro con un chal rojo, sentada de perfil, mira hacia arriba con un abanico en la mano">
+          </a>
+          <figcaption><strong>La sevillana</strong>Alfredo Valenzuela Puelma · 1890</figcaption>
+        </figure>
+        <figure class="obra" id="zamacueca-caro" data-sala="costumbres">
+          <a href="#ver-zamacueca-caro">
+            <img src="img/caro-zamacueca.jpg" width="800" height="600"
+              alt="La zamacueca, de Manuel Antonio Caro: parejas bailan en una fonda llena de gente, con banderas y botellas al fondo">
+          </a>
+          <figcaption><strong>La zamacueca</strong>Manuel Antonio Caro · década de 1870</figcaption>
+        </figure>
+        <figure class="obra" id="paseo-atkinson" data-sala="bahia">
+          <a href="#ver-paseo-atkinson">
+            <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
+              alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
+          </a>
+          <figcaption><strong>El paseo Atkinson</strong>Alfredo Helsby · 1896</figcaption>
+        </figure>
+        <figure class="obra" id="rosas" data-sala="naturaleza">
+          <a href="#ver-rosas">
+            <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+              alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+          </a>
+          <figcaption><strong>Rosas y campánulas</strong>Aurora Mira · sin fecha</figcaption>
+        </figure>
+        <figure class="obra" id="huaso" data-sala="costumbres">
+          <a href="#ver-huaso">
+            <img src="img/rugendas-huaso-lavandera.jpg" width="772" height="1024" loading="lazy"
+              alt="El huaso y la lavandera, de Mauricio Rugendas: un huaso de manta roja a caballo conversa con una mujer que lava ropa en un estero">
+          </a>
+          <figcaption><strong>El huaso y la lavandera</strong>Mauricio Rugendas · hacia 1835</figcaption>
+        </figure>
+        <figure class="obra" id="escuadra" data-sala="bahia">
+          <a href="#ver-escuadra">
+            <img src="img/somerscales-escuadra.jpg" width="928" height="650" loading="lazy"
+              alt="La escuadra chilena en 1879 en Valparaíso, de Thomas Somerscales: buques de guerra y veleros anclados en la bahía con los cerros al fondo">
+          </a>
+          <figcaption><strong>La escuadra chilena en 1879</strong>Thomas Somerscales · 1879</figcaption>
+        </figure>
+        <figure class="obra" id="lectura" data-sala="figuras">
+          <a href="#ver-lectura">
+            <img src="img/san-martin-lectura.jpg" width="1040" height="783" loading="lazy"
+              alt="La lectura, de Cosme San Martín: una familia reunida alrededor de una mesa en un salón escucha a una joven que lee">
+          </a>
+          <figcaption><strong>La lectura</strong>Cosme San Martín · 1874</figcaption>
+        </figure>
+        <figure class="obra" id="pataguas" data-sala="naturaleza">
+          <a href="#ver-pataguas">
+            <img src="img/abarca-pataguas.jpg" width="496" height="456" loading="lazy"
+              alt="Pataguas, de Agustín Abarca: árboles de troncos torcidos en un bosque de tonos ocres y verdes">
+          </a>
+          <figcaption><strong>Pataguas</strong>Agustín Abarca · hacia 1930</figcaption>
+        </figure>
+        <figure class="obra" id="zamacueca-gordon" data-sala="costumbres">
+          <a href="#ver-zamacueca-gordon">
+            <img src="img/gordon-zamacueca.jpg" width="1200" height="867" loading="lazy"
+              alt="Zamacueca, de Arturo Gordon: músicos con arpa y guitarra tocan mientras una pareja baila en un patio">
+          </a>
+          <figcaption><strong>Zamacueca</strong>Arturo Gordon · hacia 1920</figcaption>
+        </figure>
+        <figure class="obra" id="bordadora" data-sala="figuras">
+          <a href="#ver-bordadora">
+            <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
+              alt="La bordadora, de Magdalena Mira: una joven de vestido blanco, sentada de perfil, borda una tela negra con flores en un salón con velas y rosas">
+          </a>
+          <figcaption><strong>La bordadora</strong>Magdalena Mira · antes de 1930</figcaption>
+        </figure>
+        <figure class="obra" id="marina" data-sala="bahia">
+          <a href="#ver-marina">
+            <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
+              alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
+          </a>
+          <figcaption><strong>Marina de Valparaíso</strong>Alberto Valenzuela Llanos · antes de 1925</figcaption>
+        </figure>
+        <figure class="obra" id="alameda" data-sala="naturaleza">
+          <a href="#ver-alameda">
+            <img src="img/orrego-luco-alameda.jpg" width="768" height="448" loading="lazy"
+              alt="Alameda de las Delicias, de Alberto Orrego Luco: una avenida mojada por la lluvia con árboles, carruajes y paseantes al atardecer">
+          </a>
+          <figcaption><strong>Alameda de las Delicias</strong>Alberto Orrego Luco · sin fecha</figcaption>
+        </figure>
+        <figure class="obra" id="canteros" data-sala="costumbres">
+          <a href="#ver-canteros">
+            <img src="img/lira-los-canteros.jpg" width="1070" height="646" loading="lazy"
+              alt="Los canteros, de Pedro Lira: hombres mueven bloques de piedra con una carretilla y una palanca junto a un muro, bajo el sol">
+          </a>
+          <figcaption><strong>Los canteros</strong>Pedro Lira · sin fecha</figcaption>
+        </figure>
+        <figure class="obra" id="uvas" data-sala="naturaleza">
+          <a href="#ver-uvas">
+            <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
+              alt="Uvas, de Celia Castro: un racimo de uvas negras cuelga de una parra entre hojas verdes">
+          </a>
+          <figcaption><strong>Uvas</strong>Celia Castro · antes de 1930</figcaption>
+        </figure>
+        <figure class="obra" id="valparaiso-gonzalez" data-sala="bahia">
+          <a href="#ver-valparaiso-gonzalez">
+            <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy"
+              alt="Valparaíso, de Juan Francisco González: la bahía en calma con veleros anclados frente a los cerros, en tonos claros de rosa y gris">
+          </a>
+          <figcaption><strong>Valparaíso</strong>Juan Francisco González · antes de 1933</figcaption>
+        </figure>
+        <figure class="obra" id="rina" data-sala="costumbres">
+          <a href="#ver-rina">
+            <img src="img/gordon-rina.jpg" width="1280" height="960" loading="lazy"
+              alt="La riña, de Arturo Gordon: un grupo de hombres y mujeres rodea a dos que discuten, en tonos rojos y ocres">
+          </a>
+          <figcaption><strong>La riña</strong>Arturo Gordon · antes de 1944</figcaption>
+        </figure>
+        <figure class="obra" id="lo-contador" data-sala="naturaleza">
+          <a href="#ver-lo-contador">
+            <img src="img/valenzuela-llanos-lo-contador.jpg" width="652" height="365" loading="lazy"
+              alt="Paisaje de Lo Contador, de Alberto Valenzuela Llanos: árboles frondosos sobre un prado verde bajo un cielo nublado">
+          </a>
+          <figcaption><strong>Paisaje de Lo Contador</strong>Alberto Valenzuela Llanos · sin fecha</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="cierre grid entra" aria-label="Consultas por obras">
+    <section class="cierre grid" aria-label="Consultas por obras">
       <p class="cierre-frase">¿Te interesa una obra? Pregunta por su disponibilidad y precio con IVA incluido.</p>
-      <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
-        alt="Detalle de Rosas y campánulas, de Aurora Mira">
-      <div class="cierre-enlaces">
-        <p>Te ayudamos a elegir</p>
-        <a href="contacto.html#formulario">Escribir por el formulario</a><br>
-        <a href="tel:+56322345678">Llamar al +56 32 234 5678</a>
-        <p class="chico">Respondemos en 48 horas hábiles.</p>
+      <div class="acciones">
+        <a class="boton" href="contacto.html#formulario">Escribir por el formulario</a>
+        <a class="enlace-flecha" href="tel:+56322345678">+56 32 234 5678</a>
       </div>
     </section>
 
     <section class="creditos grid" id="creditos" aria-labelledby="titulo-creditos">
       <h2 id="titulo-creditos">Créditos de imágenes</h2>
       <ul>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Valpara%C3%ADso_by_Thomas_Jacques_Somerscales,_1897.jpg">Somerscales, Valparaíso</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Helsby,_Alfredo_-_El_Paseo_Atkinson_1896.jpg">Helsby, El paseo Atkinson</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Valenzuela_Llanos,_Alberto_-_Marina_de_Valparaiso_-ost_MMBAV_fRF_01.jpg">Valenzuela Llanos, Marina de Valparaíso</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Gonzalez,_Juan_Francisco_-_Valparaiso-colMacK_web.jpg">González, Valparaíso</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:La_Sevillana_(1890)_-_Alfredo_Valenzuela_Puelma_(National_Museum_of_Fine_Arts,_Santiago_de_Chile).jpg">Valenzuela Puelma, La sevillana</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Los_Canteros,_Oleo_sobre_tela,_autor_Pedro_Lira_Rencoret_-_A740339_copia.jpg">Lira, Los canteros</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Magdalena_Mira_-_La_brodeuse.jpg">Magdalena Mira, La bordadora</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Castro,_Celia_-_Uvas_-osm_MMBAV_fRF_03_framed.jpg">Celia Castro, Uvas</a>. Wikimedia Commons, dominio público.</li>
-        <li><a href="https://commons.wikimedia.org/wiki/File:Alberto_Valenzuela_Llanos_-_Paisaje_(Lo_contador).jpg">Valenzuela Llanos, Paisaje de Lo Contador</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Valpara%C3%ADso_by_Thomas_Jacques_Somerscales,_1897.jpg">Thomas Somerscales, Valparaíso</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:La_Sevillana_(1890)_-_Alfredo_Valenzuela_Puelma_(National_Museum_of_Fine_Arts,_Santiago_de_Chile).jpg">Alfredo Valenzuela Puelma, La sevillana</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Manuel_Antonio_Caro_-_La_Zamacueca.jpg">Manuel Antonio Caro, La zamacueca</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Helsby,_Alfredo_-_El_Paseo_Atkinson_1896.jpg">Alfredo Helsby, El paseo Atkinson</a>. Wikimedia Commons, dominio público.</li>
         <li><a href="https://commons.wikimedia.org/wiki/File:Aurora_Mira_Mena_Rosas_y_camp%C3%A1nulas.jpg">Aurora Mira, Rosas y campánulas</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:ElHuasoYLaLavandera.jpg">Mauricio Rugendas, El huaso y la lavandera</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:La_escuadra_chilena_en_1879_en_Valpara%C3%ADso.JPG">Thomas Somerscales, La escuadra chilena en 1879</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Cosme_San_Mart%C3%ADn_La_lectura.jpg">Cosme San Martín, La lectura</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Pataguas,_Agust%C3%ADn_Abarca,_1930.jpg">Agustín Abarca, Pataguas</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Zamacueca_por_Arturo_Gordon.jpg">Arturo Gordon, Zamacueca</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Magdalena_Mira_-_La_brodeuse.jpg">Magdalena Mira, La bordadora</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Valenzuela_Llanos,_Alberto_-_Marina_de_Valparaiso_-ost_MMBAV_fRF_01.jpg">Alberto Valenzuela Llanos, Marina de Valparaíso</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Alameda_por_Alberto_Orrego_luco.jpg">Alberto Orrego Luco, Alameda de las Delicias</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Los_Canteros,_Oleo_sobre_tela,_autor_Pedro_Lira_Rencoret_-_A740339_copia.jpg">Pedro Lira, Los canteros</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Castro,_Celia_-_Uvas_-osm_MMBAV_fRF_03_framed.jpg">Celia Castro, Uvas</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Gonzalez,_Juan_Francisco_-_Valparaiso-colMacK_web.jpg">Juan Francisco González, Valparaíso</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Gordon,_Arturo_-_La_rina_-ost_91.5x112.5_MAC_fRF02.jpg">Arturo Gordon, La riña</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Alberto_Valenzuela_Llanos_-_Paisaje_(Lo_contador).jpg">Alberto Valenzuela Llanos, Paisaje de Lo Contador</a>. Wikimedia Commons, dominio público.</li>
       </ul>
     </section>
+
+    <!-- Vistas ampliadas: cada una se abre con su ancla (#ver-…) y se cierra volviendo a la obra -->
+    <div class="visor" id="ver-somerscales" role="dialog" aria-label="Valparaíso, de Thomas Somerscales">
+      <figure>
+        <img src="img/somerscales-valparaiso.jpg" width="1200" height="766" loading="lazy" alt="Valparaíso, de Thomas Somerscales: vista desde los cerros al atardecer, con la ciudad y los barcos de la bahía bajo una cordillera rosada">
+        <figcaption><strong>Valparaíso</strong>Thomas Somerscales · 1897 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-lo-contador">← Anterior</a>
+        <a href="#somerscales">Cerrar</a>
+        <a href="#ver-sevillana">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-sevillana" role="dialog" aria-label="La sevillana, de Alfredo Valenzuela Puelma">
+      <figure>
+        <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy" alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer de cabello negro con un chal rojo, sentada de perfil, mira hacia arriba con un abanico en la mano">
+        <figcaption><strong>La sevillana</strong>Alfredo Valenzuela Puelma · 1890 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-somerscales">← Anterior</a>
+        <a href="#sevillana">Cerrar</a>
+        <a href="#ver-zamacueca-caro">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-zamacueca-caro" role="dialog" aria-label="La zamacueca, de Manuel Antonio Caro">
+      <figure>
+        <img src="img/caro-zamacueca.jpg" width="800" height="600" loading="lazy" alt="La zamacueca, de Manuel Antonio Caro: parejas bailan en una fonda llena de gente, con banderas y botellas al fondo">
+        <figcaption><strong>La zamacueca</strong>Manuel Antonio Caro · década de 1870 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-sevillana">← Anterior</a>
+        <a href="#zamacueca-caro">Cerrar</a>
+        <a href="#ver-paseo-atkinson">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-paseo-atkinson" role="dialog" aria-label="El paseo Atkinson, de Alfredo Helsby">
+      <figure>
+        <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy" alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
+        <figcaption><strong>El paseo Atkinson</strong>Alfredo Helsby · 1896 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-zamacueca-caro">← Anterior</a>
+        <a href="#paseo-atkinson">Cerrar</a>
+        <a href="#ver-rosas">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-rosas" role="dialog" aria-label="Rosas y campánulas, de Aurora Mira">
+      <figure>
+        <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy" alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+        <figcaption><strong>Rosas y campánulas</strong>Aurora Mira · sin fecha · Óleo sobre tela, 53 × 38 cm</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-paseo-atkinson">← Anterior</a>
+        <a href="#rosas">Cerrar</a>
+        <a href="#ver-huaso">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-huaso" role="dialog" aria-label="El huaso y la lavandera, de Mauricio Rugendas">
+      <figure>
+        <img src="img/rugendas-huaso-lavandera.jpg" width="772" height="1024" loading="lazy" alt="El huaso y la lavandera, de Mauricio Rugendas: un huaso de manta roja a caballo conversa con una mujer que lava ropa en un estero">
+        <figcaption><strong>El huaso y la lavandera</strong>Mauricio Rugendas · hacia 1835 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-rosas">← Anterior</a>
+        <a href="#huaso">Cerrar</a>
+        <a href="#ver-escuadra">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-escuadra" role="dialog" aria-label="La escuadra chilena en 1879, de Thomas Somerscales">
+      <figure>
+        <img src="img/somerscales-escuadra.jpg" width="928" height="650" loading="lazy" alt="La escuadra chilena en 1879 en Valparaíso, de Thomas Somerscales: buques de guerra y veleros anclados en la bahía con los cerros al fondo">
+        <figcaption><strong>La escuadra chilena en 1879</strong>Thomas Somerscales · 1879 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-huaso">← Anterior</a>
+        <a href="#escuadra">Cerrar</a>
+        <a href="#ver-lectura">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-lectura" role="dialog" aria-label="La lectura, de Cosme San Martín">
+      <figure>
+        <img src="img/san-martin-lectura.jpg" width="1040" height="783" loading="lazy" alt="La lectura, de Cosme San Martín: una familia reunida alrededor de una mesa en un salón escucha a una joven que lee">
+        <figcaption><strong>La lectura</strong>Cosme San Martín · 1874 · Óleo sobre tela, 108 × 146 cm</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-escuadra">← Anterior</a>
+        <a href="#lectura">Cerrar</a>
+        <a href="#ver-pataguas">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-pataguas" role="dialog" aria-label="Pataguas, de Agustín Abarca">
+      <figure>
+        <img src="img/abarca-pataguas.jpg" width="496" height="456" loading="lazy" alt="Pataguas, de Agustín Abarca: árboles de troncos torcidos en un bosque de tonos ocres y verdes">
+        <figcaption><strong>Pataguas</strong>Agustín Abarca · hacia 1930 · Óleo sobre tela, 91 × 99 cm</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-lectura">← Anterior</a>
+        <a href="#pataguas">Cerrar</a>
+        <a href="#ver-zamacueca-gordon">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-zamacueca-gordon" role="dialog" aria-label="Zamacueca, de Arturo Gordon">
+      <figure>
+        <img src="img/gordon-zamacueca.jpg" width="1200" height="867" loading="lazy" alt="Zamacueca, de Arturo Gordon: músicos con arpa y guitarra tocan mientras una pareja baila en un patio">
+        <figcaption><strong>Zamacueca</strong>Arturo Gordon · hacia 1920 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-pataguas">← Anterior</a>
+        <a href="#zamacueca-gordon">Cerrar</a>
+        <a href="#ver-bordadora">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-bordadora" role="dialog" aria-label="La bordadora, de Magdalena Mira">
+      <figure>
+        <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy" alt="La bordadora, de Magdalena Mira: una joven de vestido blanco, sentada de perfil, borda una tela negra con flores en un salón con velas y rosas">
+        <figcaption><strong>La bordadora</strong>Magdalena Mira · antes de 1930 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-zamacueca-gordon">← Anterior</a>
+        <a href="#bordadora">Cerrar</a>
+        <a href="#ver-marina">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-marina" role="dialog" aria-label="Marina de Valparaíso, de Alberto Valenzuela Llanos">
+      <figure>
+        <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy" alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
+        <figcaption><strong>Marina de Valparaíso</strong>Alberto Valenzuela Llanos · antes de 1925 · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-bordadora">← Anterior</a>
+        <a href="#marina">Cerrar</a>
+        <a href="#ver-alameda">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-alameda" role="dialog" aria-label="Alameda de las Delicias, de Alberto Orrego Luco">
+      <figure>
+        <img src="img/orrego-luco-alameda.jpg" width="768" height="448" loading="lazy" alt="Alameda de las Delicias, de Alberto Orrego Luco: una avenida mojada por la lluvia con árboles, carruajes y paseantes al atardecer">
+        <figcaption><strong>Alameda de las Delicias</strong>Alberto Orrego Luco · sin fecha · Óleo</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-marina">← Anterior</a>
+        <a href="#alameda">Cerrar</a>
+        <a href="#ver-canteros">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-canteros" role="dialog" aria-label="Los canteros, de Pedro Lira">
+      <figure>
+        <img src="img/lira-los-canteros.jpg" width="1070" height="646" loading="lazy" alt="Los canteros, de Pedro Lira: hombres mueven bloques de piedra con una carretilla y una palanca junto a un muro, bajo el sol">
+        <figcaption><strong>Los canteros</strong>Pedro Lira · sin fecha · Óleo sobre tela</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-alameda">← Anterior</a>
+        <a href="#canteros">Cerrar</a>
+        <a href="#ver-uvas">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-uvas" role="dialog" aria-label="Uvas, de Celia Castro">
+      <figure>
+        <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy" alt="Uvas, de Celia Castro: un racimo de uvas negras cuelga de una parra entre hojas verdes">
+        <figcaption><strong>Uvas</strong>Celia Castro · antes de 1930 · Óleo</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-canteros">← Anterior</a>
+        <a href="#uvas">Cerrar</a>
+        <a href="#ver-valparaiso-gonzalez">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-valparaiso-gonzalez" role="dialog" aria-label="Valparaíso, de Juan Francisco González">
+      <figure>
+        <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy" alt="Valparaíso, de Juan Francisco González: la bahía en calma con veleros anclados frente a los cerros, en tonos claros de rosa y gris">
+        <figcaption><strong>Valparaíso</strong>Juan Francisco González · antes de 1933 · Óleo</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-uvas">← Anterior</a>
+        <a href="#valparaiso-gonzalez">Cerrar</a>
+        <a href="#ver-rina">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-rina" role="dialog" aria-label="La riña, de Arturo Gordon">
+      <figure>
+        <img src="img/gordon-rina.jpg" width="1280" height="960" loading="lazy" alt="La riña, de Arturo Gordon: un grupo de hombres y mujeres rodea a dos que discuten, en tonos rojos y ocres">
+        <figcaption><strong>La riña</strong>Arturo Gordon · antes de 1944 · Óleo sobre tela, 91,5 × 112,5 cm</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-valparaiso-gonzalez">← Anterior</a>
+        <a href="#rina">Cerrar</a>
+        <a href="#ver-lo-contador">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
+    <div class="visor" id="ver-lo-contador" role="dialog" aria-label="Paisaje de Lo Contador, de Alberto Valenzuela Llanos">
+      <figure>
+        <img src="img/valenzuela-llanos-lo-contador.jpg" width="652" height="365" loading="lazy" alt="Paisaje de Lo Contador, de Alberto Valenzuela Llanos: árboles frondosos sobre un prado verde bajo un cielo nublado">
+        <figcaption><strong>Paisaje de Lo Contador</strong>Alberto Valenzuela Llanos · sin fecha · Óleo</figcaption>
+      </figure>
+      <nav aria-label="Recorrer la colección">
+        <a href="#ver-rina">← Anterior</a>
+        <a href="#lo-contador">Cerrar</a>
+        <a href="#ver-somerscales">Siguiente →</a>
+        <a href="contacto.html#formulario">Consultar por esta obra</a>
+      </nav>
+    </div>
   </main>
 
   <footer class="pie">

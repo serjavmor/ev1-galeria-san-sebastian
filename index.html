@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Galería Aurora, galería de pintura chilena en Valparaíso. Exposición actual: La bahía pintada, con obras de Somerscales, Helsby y Juan Francisco González.">
   <title>Galería Aurora | Inicio</title>
-  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fuentes/epilogue-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -29,19 +29,20 @@
   <main id="contenido">
     <!-- Portada: la exposición actual responde qué, cuándo y dónde -->
     <section class="portada grid" aria-labelledby="titulo-portada">
-      <img class="portada-chica" src="img/gonzalez-valparaiso.jpg" width="800" height="416"
-        alt="Valparaíso, de Juan Francisco González: la bahía en calma con veleros anclados frente a los cerros, en tonos claros de rosa y gris">
-      <h1 id="titulo-portada">
-        <span class="linea"><span>La bahía</span></span>
-        <span class="linea linea-2"><span>pintada</span></span>
-      </h1>
-      <img class="portada-alta" src="img/helsby-paseo-atkinson.jpg" width="1200" height="900"
-        alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
       <div class="portada-texto">
+        <h1 id="titulo-portada">La bahía pintada</h1>
         <p class="portada-fecha">6 de noviembre de 2026 al 31 de enero de 2027</p>
-        <p>Valparaíso visto por Thomas Somerscales, Alfredo Helsby y Juan Francisco González. En Avenida Brasil 1250, con entrada liberada.</p>
-        <a class="boton" href="#visita">Planifica tu visita</a>
+        <p class="portada-lead">Valparaíso visto por Thomas Somerscales, Alfredo Helsby y Juan Francisco González. En Avenida Brasil 1250, con entrada liberada.</p>
+        <div class="acciones">
+          <a class="boton" href="#visita">Planifica tu visita</a>
+          <a class="enlace-flecha" href="galeria.html">Ver la colección</a>
+        </div>
       </div>
+      <figure class="portada-foto">
+        <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900"
+          alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
+        <figcaption>Alfredo Helsby, El paseo Atkinson, 1896.</figcaption>
+      </figure>
     </section>
 
     <!-- Agenda: lo que viene, con fecha y hora -->
@@ -64,59 +65,92 @@
     </section>
 
     <!-- Quiénes somos -->
-    <section class="intro entra" aria-labelledby="quienes">
+    <section class="intro grid entra" aria-labelledby="quienes">
       <h2 id="quienes">Frente a la bahía</h2>
       <div class="intro-cuerpo">
         <p>
           Galería Aurora nació en Valparaíso para mostrar la pintura chilena que se hizo mirando este puerto.
-          Exponemos, compramos y vendemos obras de artistas chilenos de 1870 a 1930, y acompañamos a quien
+          Exponemos, compramos y vendemos obras de artistas chilenos de 1835 a 1930, y acompañamos a quien
           quiere empezar una colección o encontrarle un nuevo hogar a un cuadro de familia.
         </p>
         <ul class="intro-notas">
           <li>Abierto de martes a sábado, con entrada liberada.</li>
-          <li>Diez obras en sala, de nueve artistas chilenos.</li>
+          <li>Dieciocho obras en sala, de quince artistas.</li>
         </ul>
       </div>
       <figure class="panorama">
         <img src="img/somerscales-valparaiso.jpg" width="1200" height="766" loading="lazy"
           alt="Valparaíso, de Thomas Somerscales: vista desde los cerros al atardecer, con la ciudad y los barcos de la bahía bajo una cordillera rosada">
-        <figcaption>Thomas Somerscales, Valparaíso, 1897. Óleo sobre tela.</figcaption>
+        <figcaption class="pie-foto">Thomas Somerscales, Valparaíso, 1897. Óleo sobre tela.</figcaption>
       </figure>
     </section>
 
-    <!-- Obras en sala -->
+    <!-- Obras en sala: carrusel que se desliza de lado -->
     <section class="en-sala" aria-labelledby="titulo-sala">
       <div class="grid entra">
-        <h2 id="titulo-sala">Obras en sala</h2>
+        <div class="acciones">
+          <h2 id="titulo-sala">Obras en sala</h2>
+          <a class="enlace-flecha" href="galeria.html">Recorre las 18 obras</a>
+        </div>
       </div>
-      <ul class="banda">
-        <li>
+      <ul class="fila-obras">
+        <li style="--r: 1.333">
+          <a href="galeria.html#zamacueca-caro">
+            <img src="img/caro-zamacueca.jpg" width="800" height="600" loading="lazy"
+              alt="La zamacueca, de Manuel Antonio Caro: parejas bailan en una fonda llena de gente, con banderas y botellas al fondo">
+          </a>
+          <p><strong>La zamacueca</strong>Manuel Antonio Caro</p>
+        </li>
+        <li style="--r: 0.725">
+          <a href="galeria.html#sevillana">
+            <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
+              alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer con chal rojo mira hacia arriba con un abanico en la mano">
+          </a>
+          <p><strong>La sevillana</strong>Alfredo Valenzuela Puelma</p>
+        </li>
+        <li style="--r: 1.428">
+          <a href="galeria.html#escuadra">
+            <img src="img/somerscales-escuadra.jpg" width="928" height="650" loading="lazy"
+              alt="La escuadra chilena en 1879 en Valparaíso, de Thomas Somerscales: buques de guerra y veleros anclados en la bahía con los cerros al fondo">
+          </a>
+          <p><strong>La escuadra chilena en 1879</strong>Thomas Somerscales</p>
+        </li>
+        <li style="--r: 0.754">
+          <a href="galeria.html#huaso">
+            <img src="img/rugendas-huaso-lavandera.jpg" width="772" height="1024" loading="lazy"
+              alt="El huaso y la lavandera, de Mauricio Rugendas: un huaso de manta roja a caballo conversa con una mujer que lava ropa en un estero">
+          </a>
+          <p><strong>El huaso y la lavandera</strong>Mauricio Rugendas</p>
+        </li>
+        <li style="--r: 1.328">
+          <a href="galeria.html#lectura">
+            <img src="img/san-martin-lectura.jpg" width="1040" height="783" loading="lazy"
+              alt="La lectura, de Cosme San Martín: una familia reunida alrededor de una mesa en un salón escucha a una joven que lee">
+          </a>
+          <p><strong>La lectura</strong>Cosme San Martín</p>
+        </li>
+        <li style="--r: 0.699">
+          <a href="galeria.html#rosas">
+            <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+              alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+          </a>
+          <p><strong>Rosas y campánulas</strong>Aurora Mira</p>
+        </li>
+        <li style="--r: 1.384">
+          <a href="galeria.html#zamacueca-gordon">
+            <img src="img/gordon-zamacueca.jpg" width="1200" height="867" loading="lazy"
+              alt="Zamacueca, de Arturo Gordon: músicos con arpa y guitarra tocan mientras una pareja baila en un patio">
+          </a>
+          <p><strong>Zamacueca</strong>Arturo Gordon</p>
+        </li>
+        <li style="--r: 1.786">
           <a href="galeria.html#lo-contador">
             <img src="img/valenzuela-llanos-lo-contador.jpg" width="652" height="365" loading="lazy"
               alt="Paisaje de Lo Contador, de Alberto Valenzuela Llanos: árboles frondosos sobre un prado verde bajo un cielo nublado">
           </a>
-          <p class="banda-titulo" aria-hidden="true">Paisaje de Lo Contador, Valenzuela Llanos</p>
-        </li>
-        <li>
-          <a href="galeria.html#bordadora">
-            <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
-              alt="La bordadora, de Magdalena Mira: una joven de vestido blanco, sentada de perfil, borda una tela negra con flores">
-          </a>
-        </li>
-        <li>
-          <a href="galeria.html#canteros">
-            <img src="img/lira-los-canteros.jpg" width="1070" height="646" loading="lazy"
-              alt="Los canteros, de Pedro Lira: hombres mueven bloques de piedra con una carretilla y una palanca junto a un muro, bajo el sol">
-          </a>
-        </li>
-        <li>
-          <a href="galeria.html#uvas">
-            <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
-              alt="Uvas, de Celia Castro: un racimo de uvas negras cuelga de una parra entre hojas verdes">
-          </a>
+          <p><strong>Paisaje de Lo Contador</strong>Alberto Valenzuela Llanos</p>
         </li>
       </ul>
-      <p class="banda-pie">Cuatro de las diez obras en sala. <a href="galeria.html">Recorre la colección completa</a>.</p>
     </section>
 
     <!-- Próxima exposición -->
@@ -125,71 +159,67 @@
         <h2 id="titulo-proxima">Próxima: Pioneras</h2>
         <p class="portada-fecha">Desde el 12 de marzo de 2027</p>
         <p>Magdalena Mira, Aurora Mira y Celia Castro fueron de las primeras mujeres que estudiaron y expusieron pintura en Chile. La muestra reúne sus retratos, interiores y naturalezas muertas.</p>
-        <p><a href="exposiciones.html">Ver todas las exposiciones</a></p>
+        <p><a class="enlace-flecha" href="exposiciones.html">Ver todas las exposiciones</a></p>
       </div>
-      <figure>
-        <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
-          alt="La bordadora, de Magdalena Mira: una joven de vestido blanco borda sentada en un salón">
-        <figcaption>Magdalena Mira, La bordadora</figcaption>
-      </figure>
-      <figure>
-        <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
-          alt="Uvas, de Celia Castro: un racimo de uvas negras entre hojas de parra">
-        <figcaption>Celia Castro, Uvas</figcaption>
-      </figure>
-      <figure>
-        <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
-          alt="Rosas y campánulas, de Aurora Mira: rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
-        <figcaption>Aurora Mira, Rosas y campánulas</figcaption>
-      </figure>
+      <div class="expo-fotos">
+        <figure>
+          <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
+            alt="La bordadora, de Magdalena Mira: una joven de vestido blanco borda sentada en un salón">
+          <figcaption>Magdalena Mira, La bordadora</figcaption>
+        </figure>
+        <figure>
+          <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
+            alt="Uvas, de Celia Castro: un racimo de uvas negras entre hojas de parra">
+          <figcaption>Celia Castro, Uvas</figcaption>
+        </figure>
+        <figure>
+          <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+            alt="Rosas y campánulas, de Aurora Mira: rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+          <figcaption>Aurora Mira, Rosas y campánulas</figcaption>
+        </figure>
+      </div>
     </section>
 
     <!-- Artistas: los nombres como un muro -->
-    <section class="muro-nombres entra" aria-labelledby="titulo-artistas">
-      <h2 id="titulo-artistas">Artistas de la colección</h2>
+    <section class="muro-nombres grid entra" aria-labelledby="titulo-artistas">
+      <h2 id="titulo-artistas">Quince artistas</h2>
       <ul>
-        <li><a href="artistas.html#somerscales">Thomas Somerscales</a></li>
-        <li><a href="artistas.html#helsby">Alfredo Helsby</a></li>
-        <li><a href="artistas.html#gonzalez">Juan Francisco González</a></li>
-        <li><a href="artistas.html#valenzuela-llanos">Alberto Valenzuela Llanos</a></li>
-        <li><a href="artistas.html#lira">Pedro Lira</a></li>
-        <li><a href="artistas.html#valenzuela-puelma">Alfredo Valenzuela Puelma</a></li>
-        <li><a href="artistas.html#magdalena-mira">Magdalena Mira</a></li>
-        <li><a href="artistas.html#aurora-mira">Aurora Mira</a></li>
-        <li><a href="artistas.html#celia-castro">Celia Castro</a></li>
+        <li><a href="artistas.html#rugendas">Mauricio Rugendas <span>1802–1858</span></a></li>
+        <li><a href="artistas.html#caro">Manuel Antonio Caro <span>1835–1903</span></a></li>
+        <li><a href="artistas.html#somerscales">Thomas Somerscales <span>1842–1927</span></a></li>
+        <li><a href="artistas.html#lira">Pedro Lira <span>1845–1912</span></a></li>
+        <li><a href="artistas.html#san-martin">Cosme San Martín <span>1849–1906</span></a></li>
+        <li><a href="artistas.html#gonzalez">Juan Francisco González <span>1853–1933</span></a></li>
+        <li><a href="artistas.html#orrego-luco">Alberto Orrego Luco <span>1854–1931</span></a></li>
+        <li><a href="artistas.html#valenzuela-puelma">Alfredo Valenzuela Puelma <span>1856–1909</span></a></li>
+        <li><a href="artistas.html#magdalena-mira">Magdalena Mira <span>1859–1930</span></a></li>
+        <li><a href="artistas.html#celia-castro">Celia Castro <span>1860–1930</span></a></li>
+        <li><a href="artistas.html#helsby">Alfredo Helsby <span>1862–1933</span></a></li>
+        <li><a href="artistas.html#aurora-mira">Aurora Mira <span>1863–1939</span></a></li>
+        <li><a href="artistas.html#valenzuela-llanos">Alberto Valenzuela Llanos <span>1869–1925</span></a></li>
+        <li><a href="artistas.html#abarca">Agustín Abarca <span>1882–1953</span></a></li>
+        <li><a href="artistas.html#gordon">Arturo Gordon <span>1883–1944</span></a></li>
       </ul>
     </section>
 
     <!-- Noticias -->
     <section class="noticias grid entra" aria-labelledby="titulo-noticias">
-      <h2 id="titulo-noticias">Noticias de la galería</h2>
-      <img class="noticias-foto" src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
-        alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer con chal rojo mira hacia arriba con un abanico en la mano">
+      <h2 id="titulo-noticias">Noticias</h2>
+      <img class="noticias-foto" src="img/gordon-rina.jpg" width="1280" height="960" loading="lazy"
+        alt="La riña, de Arturo Gordon: un grupo de hombres y mujeres rodea a dos que discuten, en tonos rojos y ocres">
       <ul class="filas">
         <li><span class="tipo">28 de octubre</span><span>Abrimos las reservas de mediación para colegios 2027</span><span class="valor">Colegios</span></li>
         <li><span class="tipo">20 de octubre</span><span>La bahía pintada reúne por primera vez a Somerscales, Helsby y González</span><span class="valor">Exposiciones</span></li>
+        <li><span class="tipo">14 de octubre</span><span>Llegan a la colección obras de Rugendas, Caro y Arturo Gordon</span><span class="valor">Colección</span></li>
         <li><span class="tipo">9 de octubre</span><span>Desde diciembre abrimos también los domingos de 11:00 a 15:00</span><span class="valor">Horario</span></li>
       </ul>
     </section>
 
     <!-- Visita -->
     <section class="visita grid entra" id="visita" aria-labelledby="titulo-visita">
-      <h2 id="titulo-visita">Cómo visitarnos</h2>
-      <p class="visita-lead">Estamos en el plan de Valparaíso. La entrada es liberada y no necesitas reservar, salvo para grupos de más de diez personas.</p>
-      <figure class="visita-foto">
-        <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
-          alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
-        <p>Después de la visita, sube por el ascensor Concepción hasta el paseo Atkinson, el mismo que pintó Alfredo Helsby en 1896.</p>
-      </figure>
-      <div class="visita-lado">
-        <div class="mapa">
-          <svg viewBox="0 0 400 320" role="img" aria-labelledby="mapa-titulo">
-            <title id="mapa-titulo">Mapa simple de la bahía de Valparaíso con la ubicación de la galería en el plan</title>
-            <path d="M0 320 L0 150 C40 140 70 170 110 190 C160 215 230 215 290 180 C330 155 360 110 400 95 L400 320 Z" fill="#f4d96c"/>
-            <circle cx="205" cy="238" r="10" fill="#133621"/>
-            <text x="120" y="110" fill="#f4d96c" font-size="22" font-family="Sentient, Georgia, serif">Bahía de Valparaíso</text>
-          </svg>
-        </div>
+      <div class="visita-texto">
+        <h2 id="titulo-visita">Cómo visitarnos</h2>
+        <p class="visita-lead">Estamos en el plan de Valparaíso. La entrada es liberada y no necesitas reservar, salvo para grupos de más de diez personas.</p>
         <dl class="datos">
           <div>
             <dt>Dirección</dt>
@@ -209,18 +239,30 @@
           </div>
         </dl>
       </div>
+      <div class="visita-lado">
+        <figure class="visita-foto">
+          <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
+            alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
+          <p>Después de la visita, sube por el ascensor Concepción hasta el paseo Atkinson, el mismo que pintó Alfredo Helsby en 1896.</p>
+        </figure>
+        <div class="mapa">
+          <svg viewBox="0 0 400 200" role="img" aria-labelledby="mapa-titulo">
+            <title id="mapa-titulo">Mapa simple de la bahía de Valparaíso con la ubicación de la galería en el plan</title>
+            <path d="M0 200 L0 80 C40 70 70 100 110 120 C160 145 230 145 290 110 C330 85 360 45 400 30 L400 200 Z" fill="#1f2b4d"/>
+            <circle cx="190" cy="160" r="10" fill="#f7941d"/>
+            <text x="24" y="40" fill="#1f2b4d" font-size="20" font-weight="700" font-family="Epilogue, Arial, sans-serif">Bahía de Valparaíso</text>
+            <text x="210" y="166" fill="#ffffff" font-size="16" font-family="Epilogue, Arial, sans-serif">Galería Aurora</text>
+          </svg>
+        </div>
+      </div>
     </section>
 
     <!-- Cierre con contacto -->
-    <section class="cierre grid entra" aria-label="Contacto rápido">
+    <section class="cierre grid" aria-label="Contacto rápido">
       <p class="cierre-frase">¿Quieres comprar, vender o tasar una obra? Te respondemos en dos días hábiles.</p>
-      <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
-        alt="Detalle de La bordadora, de Magdalena Mira">
-      <div class="cierre-enlaces">
-        <p>¿Prefieres hablar con nosotros?</p>
-        <a href="contacto.html#formulario">Escribir por el formulario</a><br>
-        <a href="tel:+56322345678">Llamar al +56 32 234 5678</a>
-        <p class="chico">Valparaíso, Chile. Respondemos en 48 horas hábiles.</p>
+      <div class="acciones">
+        <a class="boton" href="contacto.html#formulario">Escribir por el formulario</a>
+        <a class="enlace-flecha" href="tel:+56322345678">+56 32 234 5678</a>
       </div>
     </section>
   </main>
