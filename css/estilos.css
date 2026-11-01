@@ -372,8 +372,7 @@ figure[id] {
   object-fit: cover;
 }
 
-/* ---------- Obras en sala: filas justificadas ----------
-   Cada obra crece según su proporción (--r = ancho / alto), así todas las de una fila quedan del mismo alto. */
+/* ---------- Obras en sala: grilla de miniaturas ---------- */
 .en-sala {
   padding-top: var(--section);
 }
@@ -391,47 +390,37 @@ figure[id] {
   align-items: end;
 }
 
-.fila-obras {
-  display: flex;
-  flex-wrap: wrap;
+.obras-sala {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
   margin-top: 40px;
+  padding: 0 var(--gutter);
   list-style: none;
 }
 
-.fila-obras::after {
-  content: "";
-  flex-grow: 999;
-}
-
-.fila-obras li {
-  flex: calc(var(--r) * 100) 1 calc(var(--r) * 140px);
-}
-
-.fila-obras a {
+.obras-sala a {
   display: block;
   overflow: hidden;
-  background: var(--surface);
 }
 
-.fila-obras img {
+.obras-sala img {
   width: 100%;
-  aspect-ratio: var(--r);
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 600ms var(--ease);
+  transition: transform 300ms;
 }
 
-.fila-obras a:hover img,
-.fila-obras a:focus-visible img {
+.obras-sala a:hover img {
   transform: scale(1.04);
 }
 
-.fila-obras p {
+.obras-sala p {
   margin-top: 10px;
   font-size: var(--step-small);
 }
 
-.fila-obras strong {
+.obras-sala strong {
   display: block;
   font-weight: 700;
 }
@@ -635,69 +624,9 @@ figure[id] {
   line-height: 1.4;
 }
 
-/* ---------- Galería: filtros por sala ---------- */
+/* ---------- Galería ---------- */
 .coleccion {
   padding-bottom: var(--section);
-}
-
-.filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.filtros input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.filtros label {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 48px;
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: var(--surface);
-  font-size: var(--step-small);
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 200ms var(--ease), color 200ms var(--ease);
-}
-
-.filtros label span {
-  font-weight: 400;
-  color: var(--muted);
-}
-
-.filtros label:hover {
-  background: #e3e6eb;
-}
-
-.filtros input:checked + label {
-  background: var(--ink);
-  color: var(--bg);
-}
-
-.filtros input:checked + label span {
-  color: var(--on-dark-muted);
-}
-
-.filtros input:focus-visible + label {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
-
-/* Cada radio muestra solo las obras de su sala; "Todas" no oculta nada */
-.coleccion:has(#f-bahia:checked) .obra:not([data-sala="bahia"]),
-.coleccion:has(#f-costumbres:checked) .obra:not([data-sala="costumbres"]),
-.coleccion:has(#f-figuras:checked) .obra:not([data-sala="figuras"]),
-.coleccion:has(#f-naturaleza:checked) .obra:not([data-sala="naturaleza"]) {
-  display: none;
 }
 
 /* ---------- Galería: muro tipo mosaico ---------- */
@@ -1095,6 +1024,7 @@ figure[id] {
 }
 
 .datos-contacto address {
+  overflow-wrap: anywhere;
   display: grid;
   gap: 8px;
   font-size: var(--step-lead);
@@ -1263,7 +1193,7 @@ figure[id] {
 
   .muro { columns: 2; }
 
-  .fila-obras li { flex-basis: calc(var(--r) * 240px); }
+  .obras-sala { grid-template-columns: repeat(3, 1fr); }
 
   .nomina ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
@@ -1308,7 +1238,7 @@ figure[id] {
 
   .muro { columns: 3; }
 
-  .fila-obras li { flex-basis: calc(var(--r) * 300px); }
+  .obras-sala { grid-template-columns: repeat(4, 1fr); }
 
   .nomina ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
@@ -1332,74 +1262,9 @@ figure[id] {
   .muro { columns: 4; }
 }
 
-/* ---------- Movimiento (sin JavaScript) ---------- */
+/* ---------- Desplazamiento suave al usar los enlaces internos ---------- */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
-
-  .portada h1,
-  .cabecera h1 {
-    animation: subir 900ms var(--ease) both;
-  }
-
-  .portada-texto > :not(h1),
-  .cabecera p {
-    animation: aparecer 800ms var(--ease) 200ms both;
-  }
-
-  .portada-foto {
-    overflow: hidden;
-    animation: aparecer 900ms var(--ease) 120ms both;
-  }
-
-  .portada-foto img,
-  .panorama img,
-  .visita-foto img {
-    animation: deriva 24s ease-in-out infinite alternate;
-  }
-
-  .panorama,
-  .visita-foto {
-    overflow: hidden;
-  }
-
-  .visor:target figure {
-    animation: aparecer 400ms var(--ease) both;
-  }
-
-  @supports (animation-timeline: view()) {
-    .entra > *,
-    .formulario > *,
-    .datos-contacto > *,
-    .fila-obras li,
-    .obra,
-    .muro-nombres li,
-    .expo-ficha > *,
-    .expo-fotos figure,
-    .filas li {
-      animation: aparecer linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 55%;
-    }
-
-    .entra > :nth-child(2) { animation-range: entry 8% entry 63%; }
-    .entra > :nth-child(3) { animation-range: entry 16% entry 71%; }
-    .entra > :nth-child(4) { animation-range: entry 24% entry 79%; }
-  }
-}
-
-@keyframes subir {
-  from { opacity: 0; transform: translateY(32px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes aparecer {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes deriva {
-  from { transform: scale(1); }
-  to { transform: scale(1.06); }
 }
