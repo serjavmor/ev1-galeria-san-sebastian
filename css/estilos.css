@@ -1,4 +1,4 @@
-/* Galería Aurora: hoja de estilos común a las cinco páginas.
+/* Galería San Sebastián: hoja de estilos común a las cinco páginas.
    Se escribe primero para celular y crece con dos quiebres: 760px y 1080px.
    El contenido nunca pasa de 1440px de ancho, aunque la pantalla sea más grande. */
 
@@ -835,24 +835,6 @@ figure[id] {
   color: var(--accent-ink);
 }
 
-/* ---------- Créditos ---------- */
-.creditos {
-  padding-block: var(--section);
-  background: var(--surface);
-}
-
-.creditos ul {
-  columns: 1;
-  column-gap: var(--gap);
-  padding-left: 1.2em;
-  font-size: var(--step-small);
-}
-
-.creditos li {
-  break-inside: avoid;
-  margin-bottom: 8px;
-}
-
 /* ---------- Artistas ---------- */
 .nomina {
   padding-bottom: var(--section);
@@ -937,14 +919,6 @@ figure[id] {
   display: grid;
   gap: 4px;
   padding-left: 1.2em;
-}
-
-.agenda {
-  padding-block: var(--section);
-}
-
-.agenda h3 {
-  margin-top: 24px;
 }
 
 /* ---------- Contacto y formulario ---------- */
@@ -1162,11 +1136,11 @@ figure[id] {
 }
 
 .pie-nombre {
-  font-size: clamp(3rem, 12.4vw, 13.5rem);
+  font-size: clamp(2.75rem, 8.6vw, 9.5rem);
   font-weight: 900;
   line-height: 0.85;
   letter-spacing: -0.05em;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .pie-fila {
@@ -1291,8 +1265,6 @@ figure[id] {
 
   .fila-obras li { flex-basis: calc(var(--r) * 240px); }
 
-  .creditos ul { columns: 2; }
-
   .nomina ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .artista img { grid-column: 1 / 6; }
@@ -1300,7 +1272,7 @@ figure[id] {
 
   .campo-doble { grid-template-columns: 1fr 1fr; }
 
-  .pie-cols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pie-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .datos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
@@ -1337,8 +1309,6 @@ figure[id] {
   .muro { columns: 3; }
 
   .fila-obras li { flex-basis: calc(var(--r) * 300px); }
-  .creditos h2 { grid-column: 1 / 5; }
-  .creditos ul { grid-column: 5 / 13; }
 
   .nomina ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
@@ -1348,9 +1318,6 @@ figure[id] {
   .expo-actual img { grid-column: 1 / 8; }
   .expo-ficha { grid-column: 9 / 13; }
 
-  .agenda h2 { grid-column: 1 / 5; grid-row: 1 / span 4; }
-  .agenda h3,
-  .agenda .filas { grid-column: 5 / 13; }
 
   .formulario { grid-column: 1 / 8; }
   .datos-contacto { grid-column: 9 / 13; }
@@ -1408,6 +1375,8 @@ figure[id] {
     .fila-obras li,
     .obra,
     .muro-nombres li,
+    .expo-ficha > *,
+    .expo-fotos figure,
     .filas li {
       animation: aparecer linear both;
       animation-timeline: view();
