@@ -1036,31 +1036,6 @@ a:hover {
   object-fit: cover;
 }
 
-.privacidad {
-  margin-top: 120px;
-  padding-block: 96px;
-  background: var(--surface);
-}
-
-.privacidad h2 {
-  grid-column: 1 / 5;
-  font-size: var(--step-head);
-}
-
-.privacidad-texto {
-  grid-column: 6 / 12;
-  font-size: var(--step-small);
-}
-
-.privacidad-texto p + p,
-.privacidad-texto ul {
-  margin-top: 16px;
-}
-
-.privacidad-texto ul {
-  padding-left: 1.1em;
-}
-
 /* ---------- Pie ---------- */
 .pie {
   padding: 120px var(--margin) 40px;
@@ -1206,7 +1181,6 @@ a:hover {
     .formulario > *,
     .formulario fieldset > *,
     .datos-contacto > *,
-    .privacidad-texto > *,
     .banda li {
       animation: aparecer linear both;
       animation-timeline: view();
@@ -1502,9 +1476,6 @@ html {
     margin-top: 32px;
   }
 
-  .privacidad-texto {
-    margin-top: 24px;
-  }
 
   .pie {
     padding-top: 80px;
@@ -1529,13 +1500,7 @@ html {
   }
 }
 
-.consentimiento .ayuda {
-  grid-column: 2;
-}
 
-.privacidad-texto ul + p {
-  margin-top: 16px;
-}
 
 .consentimiento input {
   outline: 2px solid var(--muted);
