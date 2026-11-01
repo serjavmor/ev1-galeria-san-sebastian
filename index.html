@@ -11,6 +11,8 @@
 <body>
   <a class="saltar" href="#contenido">Saltar al contenido</a>
 
+  <p class="aviso">Abierto de martes a sábado, de 10:30 a 19:00 · Entrada liberada · Avenida Brasil 1250, Valparaíso</p>
+
   <header class="barra" id="arriba">
     <a class="marca" href="index.html">Galería Aurora</a>
     <nav aria-label="Menú principal">
@@ -40,6 +42,25 @@
         <p>Valparaíso visto por Thomas Somerscales, Alfredo Helsby y Juan Francisco González. En Avenida Brasil 1250, con entrada liberada.</p>
         <a class="boton" href="#visita">Planifica tu visita</a>
       </div>
+    </section>
+
+    <!-- Agenda: lo que viene, con fecha y hora -->
+    <section class="agenda-franja" aria-labelledby="titulo-proximo">
+      <h2 id="titulo-proximo" class="oculto">Próximas actividades</h2>
+      <ul class="grid">
+        <li>
+          <p class="agenda-fecha">Jueves 5 de noviembre, 19:00</p>
+          <p>Charla: cómo cuidar un cuadro en casa</p>
+        </li>
+        <li>
+          <p class="agenda-fecha">Sábado 7 de noviembre, 12:00</p>
+          <p>Visita guiada por La bahía pintada</p>
+        </li>
+        <li>
+          <p class="agenda-fecha">Viernes 12 de marzo, 19:00</p>
+          <p>Inauguración de Pioneras</p>
+        </li>
+      </ul>
     </section>
 
     <!-- Quiénes somos -->
@@ -98,20 +119,56 @@
       <p class="banda-pie">Cuatro de las diez obras en sala. <a href="galeria.html">Recorre la colección completa</a>.</p>
     </section>
 
-    <!-- Servicios -->
-    <section class="servicios grid entra" aria-labelledby="titulo-servicios">
-      <h2 id="titulo-servicios">Comprar, vender y cuidar una obra</h2>
-      <img class="servicios-foto" src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
-        alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
-      <p class="servicios-rotulo">Servicios</p>
+    <!-- Próxima exposición -->
+    <section class="expo-proxima grid entra" aria-labelledby="titulo-proxima">
+      <div class="expo-proxima-texto">
+        <h2 id="titulo-proxima">Próxima: Pioneras</h2>
+        <p class="portada-fecha">Desde el 12 de marzo de 2027</p>
+        <p>Magdalena Mira, Aurora Mira y Celia Castro fueron de las primeras mujeres que estudiaron y expusieron pintura en Chile. La muestra reúne sus retratos, interiores y naturalezas muertas.</p>
+        <p><a href="exposiciones.html">Ver todas las exposiciones</a></p>
+      </div>
+      <figure>
+        <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
+          alt="La bordadora, de Magdalena Mira: una joven de vestido blanco borda sentada en un salón">
+        <figcaption>Magdalena Mira, La bordadora</figcaption>
+      </figure>
+      <figure>
+        <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
+          alt="Uvas, de Celia Castro: un racimo de uvas negras entre hojas de parra">
+        <figcaption>Celia Castro, Uvas</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+          alt="Rosas y campánulas, de Aurora Mira: rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+        <figcaption>Aurora Mira, Rosas y campánulas</figcaption>
+      </figure>
+    </section>
+
+    <!-- Artistas: los nombres como un muro -->
+    <section class="muro-nombres entra" aria-labelledby="titulo-artistas">
+      <h2 id="titulo-artistas">Artistas de la colección</h2>
+      <ul>
+        <li><a href="artistas.html#somerscales">Thomas Somerscales</a></li>
+        <li><a href="artistas.html#helsby">Alfredo Helsby</a></li>
+        <li><a href="artistas.html#gonzalez">Juan Francisco González</a></li>
+        <li><a href="artistas.html#valenzuela-llanos">Alberto Valenzuela Llanos</a></li>
+        <li><a href="artistas.html#lira">Pedro Lira</a></li>
+        <li><a href="artistas.html#valenzuela-puelma">Alfredo Valenzuela Puelma</a></li>
+        <li><a href="artistas.html#magdalena-mira">Magdalena Mira</a></li>
+        <li><a href="artistas.html#aurora-mira">Aurora Mira</a></li>
+        <li><a href="artistas.html#celia-castro">Celia Castro</a></li>
+      </ul>
+    </section>
+
+    <!-- Noticias -->
+    <section class="noticias grid entra" aria-labelledby="titulo-noticias">
+      <h2 id="titulo-noticias">Noticias de la galería</h2>
+      <img class="noticias-foto" src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
+        alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer con chal rojo mira hacia arriba con un abanico en la mano">
       <ul class="filas">
-        <li><span class="tipo">Compra</span><span>Obras en sala y en bodega</span><span class="valor">Previa cita</span></li>
-        <li><span class="tipo">Venta</span><span>Consignación de pintura chilena</span><span class="valor">Tasación sin costo</span></li>
-        <li><span class="tipo">Tasación</span><span>Informe para seguros y herencias</span><span class="valor">5 días hábiles</span></li>
-        <li><span class="tipo">Asesoría</span><span>Empezar u ordenar una colección</span><span class="valor">Previa cita</span></li>
-        <li><span class="tipo">Visitas</span><span>Recorrido guiado por la exposición</span><span class="valor">Sábados 12:00</span></li>
-        <li><span class="tipo">Colegios</span><span>Mediación para cursos</span><span class="valor">Martes a viernes</span></li>
-        <li><span class="tipo">Cuidado</span><span>Derivación a talleres de restauración</span><span class="valor"><a href="contacto.html">Consultar</a></span></li>
+        <li><span class="tipo">28 de octubre</span><span>Abrimos las reservas de mediación para colegios 2027</span><span class="valor">Colegios</span></li>
+        <li><span class="tipo">20 de octubre</span><span>La bahía pintada reúne por primera vez a Somerscales, Helsby y González</span><span class="valor">Exposiciones</span></li>
+        <li><span class="tipo">9 de octubre</span><span>Desde diciembre abrimos también los domingos de 11:00 a 15:00</span><span class="valor">Horario</span></li>
       </ul>
     </section>
 
@@ -211,7 +268,7 @@
       </form>
     </div>
     <div class="pie-legal">
-      <p>Sergio Morales · Taller de Tecnologías Web · Sección IF101IINF</p>
+      <p>Sergio Morales · Taller de Tecnologías Web</p>
       <a href="#arriba">Volver arriba</a>
     </div>
   </footer>
