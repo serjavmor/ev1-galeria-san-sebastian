@@ -3,59 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escribe a Galería Aurora para comprar, vender o tasar una obra. Avenida Brasil 1250, Valparaíso.">
   <title>Galería Aurora | Contacto</title>
+  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <h1>Galería Aurora</h1>
-    <p class="lema">Arte que se mira de cerca</p>
-    <nav>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra" id="arriba">
+    <a class="marca" href="index.html">Galería Aurora</a>
+    <nav aria-label="Menú principal">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="galeria.html">Galería</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="exposiciones.html">Exposiciones</a></li>
         <li><a href="contacto.html" aria-current="page">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h2>Contáctanos</h2>
-    <p>Completa el formulario y te responderemos dentro de 48 horas hábiles. Todos los campos son obligatorios.</p>
+  <main id="contenido">
+    <section class="cabecera grid entra" aria-labelledby="titulo-contacto">
+      <h1 id="titulo-contacto">Contacto</h1>
+      <p>Escríbenos para comprar, vender o tasar una obra, o para cualquier consulta sobre la colección. Te respondemos en 48 horas hábiles.</p>
+    </section>
 
-    <form action="#" method="post">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Ej.: Camila Rojas" required>
+    <section class="contacto grid entra" aria-label="Formulario y datos de contacto">
+      <form class="formulario" id="formulario" action="#" method="post" aria-describedby="nota-obligatorios">
+        <p class="obligatorio-nota chico" id="nota-obligatorios">Los campos marcados con asterisco (*) son obligatorios.</p>
 
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="nombre@correo.cl" required>
+        <fieldset>
+          <legend>Tus datos</legend>
 
-      <label for="tipo">Tipo de solicitud</label>
-      <select id="tipo" name="tipo" required>
-        <option value="">Selecciona una opción</option>
-        <option value="compra">Compra</option>
-        <option value="consulta">Consulta</option>
-        <option value="venta">Venta</option>
-      </select>
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="3" maxlength="80"
+              placeholder="Ej.: Camila Rojas Soto" aria-describedby="nombre-ayuda" required>
+            <span class="ayuda" id="nombre-ayuda">Nombre y apellido, para saber cómo dirigirnos a ti.</span>
+            <span class="error">Escribe tu nombre completo, con al menos 3 letras.</span>
+          </div>
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué obra te interesa o qué necesitas" required></textarea>
+          <div class="campo-doble">
+            <div class="campo">
+              <label for="correo">Correo electrónico *</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" maxlength="120"
+                placeholder="nombre@correo.cl" aria-describedby="correo-ayuda" required>
+              <span class="ayuda" id="correo-ayuda">Te responderemos a esta dirección.</span>
+              <span class="error">Escribe un correo válido, por ejemplo nombre@correo.cl.</span>
+            </div>
 
-      <button type="submit">Enviar mensaje</button>
-    </form>
+            <div class="campo">
+              <label for="telefono">Teléfono <span class="opcional">(opcional)</span></label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+                pattern="(\+?56)? ?9 ?[0-9]{4} ?[0-9]{4}" placeholder="+56 9 1234 5678" aria-describedby="telefono-ayuda">
+              <span class="ayuda" id="telefono-ayuda">Celular chileno, por si prefieres que te llamemos.</span>
+              <span class="error">Escribe un celular de 9 dígitos, por ejemplo +56 9 1234 5678.</span>
+            </div>
+          </div>
+        </fieldset>
 
-    <section>
-      <h2>Otros datos de contacto</h2>
-      <address>
-        Dirección: Avenida Brasil 1250, Valparaíso, Chile<br>
-        Teléfono: <a href="tel:+56322345678">+56 32 234 5678</a><br>
-        Horario: lunes a viernes, de 10:00 a 18:00
-      </address>
+        <fieldset>
+          <legend>Tu solicitud</legend>
+
+          <div class="campo">
+            <label for="tipo">Tipo de solicitud *</label>
+            <select id="tipo" name="tipo" aria-describedby="tipo-ayuda" required>
+              <option value="">Selecciona una opción</option>
+              <option value="compra">Compra</option>
+              <option value="consulta">Consulta</option>
+              <option value="venta">Venta</option>
+            </select>
+            <span class="ayuda" id="tipo-ayuda">Compra: te interesa una obra. Venta: quieres vender o consignar una obra. Consulta: cualquier otra pregunta.</span>
+            <span class="error">Elige si tu solicitud es de compra, consulta o venta.</span>
+          </div>
+
+          <div class="campo">
+            <label for="obra">Obra de interés <span class="opcional">(opcional)</span></label>
+            <input type="text" id="obra" name="obra" list="obras" maxlength="100"
+              placeholder="Ej.: La bordadora" aria-describedby="obra-ayuda">
+            <datalist id="obras">
+              <option value="Valparaíso, de Thomas Somerscales"></option>
+              <option value="El paseo Atkinson, de Alfredo Helsby"></option>
+              <option value="Marina de Valparaíso, de Alberto Valenzuela Llanos"></option>
+              <option value="Valparaíso, de Juan Francisco González"></option>
+              <option value="La sevillana, de Alfredo Valenzuela Puelma"></option>
+              <option value="Los canteros, de Pedro Lira"></option>
+              <option value="La bordadora, de Magdalena Mira"></option>
+              <option value="Uvas, de Celia Castro"></option>
+              <option value="Paisaje de Lo Contador, de Alberto Valenzuela Llanos"></option>
+              <option value="Rosas y campánulas, de Aurora Mira"></option>
+            </datalist>
+            <span class="ayuda" id="obra-ayuda">Empieza a escribir y elige de la lista, o escribe el nombre de otra obra.</span>
+          </div>
+
+          <div class="campo">
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="6" minlength="20" maxlength="1000"
+              placeholder="Cuéntanos qué obra te interesa, qué quieres vender o cuál es tu pregunta." aria-describedby="mensaje-ayuda" required></textarea>
+            <span class="ayuda" id="mensaje-ayuda">Entre 20 y 1000 caracteres.</span>
+            <span class="error">Tu mensaje debe tener al menos 20 caracteres.</span>
+          </div>
+
+          <div class="campo consentimiento">
+            <input type="checkbox" id="acepto" name="acepto" value="si" aria-describedby="acepto-ayuda" required>
+            <label for="acepto">Acepto que Galería Aurora use mis datos solo para responder esta solicitud. *</label>
+            <span class="error">Necesitamos tu autorización para responderte.</span>
+            <span class="ayuda" id="acepto-ayuda">Lee el <a href="#privacidad">aviso de privacidad</a>.</span>
+          </div>
+        </fieldset>
+
+        <div class="enviar">
+          <button class="boton" type="submit">Enviar solicitud</button>
+          <p class="chico">Te respondemos en 48 horas hábiles.</p>
+        </div>
+      </form>
+
+      <div class="datos-contacto">
+        <h2>Visítanos o llámanos</h2>
+        <address>
+          <p>Avenida Brasil 1250, Valparaíso, Chile</p>
+          <p><a href="tel:+56322345678">+56 32 234 5678</a></p>
+          <p><a href="mailto:contacto@galeriaaurora.cl">contacto@galeriaaurora.cl</a></p>
+        </address>
+        <dl>
+          <dt>Horario</dt>
+          <dd>Martes a sábado, de 10:30 a 19:00</dd>
+          <dt>Cerrado</dt>
+          <dd>Domingo, lunes y festivos</dd>
+          <dt>Cómo llegar</dt>
+          <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Brasil+1250+Valparaiso">Abrir en Google Maps</a></dd>
+          <dt>Prensa</dt>
+          <dd><a href="mailto:prensa@galeriaaurora.cl">prensa@galeriaaurora.cl</a></dd>
+        </dl>
+        <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy"
+          alt="Valparaíso, de Juan Francisco González: veleros anclados en la bahía frente a los cerros">
+      </div>
+    </section>
+
+    <section class="en-sala" aria-labelledby="titulo-preguntadas">
+      <div class="grid entra">
+        <h2 id="titulo-preguntadas">Las más consultadas</h2>
+      </div>
+      <ul class="banda">
+        <li>
+          <a href="galeria.html#paseo-atkinson">
+            <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
+              alt="El paseo Atkinson, de Alfredo Helsby: una niña con un aro en un paseo soleado sobre la bahía">
+          </a>
+          <p class="banda-titulo" aria-hidden="true">El paseo Atkinson, Alfredo Helsby</p>
+        </li>
+        <li>
+          <a href="galeria.html#sevillana">
+            <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
+              alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer con chal rojo y un abanico">
+          </a>
+        </li>
+        <li>
+          <a href="galeria.html#marina">
+            <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
+              alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas y olas en la orilla">
+          </a>
+        </li>
+        <li>
+          <a href="galeria.html#rosas">
+            <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+              alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas y campánulas">
+          </a>
+        </li>
+      </ul>
+      <p class="banda-pie">Si te interesa una, anótala en el campo «Obra de interés» del formulario.</p>
+    </section>
+
+    <section class="privacidad grid" id="privacidad" aria-labelledby="titulo-privacidad">
+      <h2 id="titulo-privacidad">Aviso de privacidad</h2>
+      <div class="privacidad-texto">
+        <p>Galería Aurora, con domicilio en Avenida Brasil 1250, Valparaíso, es responsable de los datos personales que nos envías por este sitio.</p>
+        <p>Usamos tu nombre, correo, teléfono y mensaje solo para responder tu solicitud y, si te suscribes, para enviarte el boletín. No los vendemos ni los compartimos con terceros para fines comerciales.</p>
+        <p>Guardamos cada solicitud por un máximo de 12 meses, y el correo del boletín hasta que te des de baja.</p>
+        <p>Según la Ley 19.628, modificada por la Ley 21.719 de protección de datos personales, puedes pedirnos en cualquier momento:</p>
+        <ul>
+          <li>Acceder a tus datos y saber cómo los usamos.</li>
+          <li>Corregirlos si están incompletos o equivocados.</li>
+          <li>Eliminarlos.</li>
+          <li>Oponerte a que los usemos o pedir que los bloqueemos.</li>
+          <li>Recibirlos en un formato que puedas llevar a otro lugar.</li>
+        </ul>
+        <p>Escríbenos a <a href="mailto:privacidad@galeriaaurora.cl">privacidad@galeriaaurora.cl</a> y te respondemos dentro de 30 días corridos.</p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Galería Aurora · Valparaíso, Chile</p>
+  <footer class="pie">
+    <p class="pie-nombre">Galería Aurora</p>
+    <div class="pie-fila">
+      <address class="pie-lugares">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Brasil+1250+Valparaiso">Avenida Brasil 1250, Valparaíso</a><br>
+        <a href="tel:+56322345678">+56 32 234 5678</a><br>
+        <a href="mailto:contacto@galeriaaurora.cl">contacto@galeriaaurora.cl</a>
+      </address>
+      <div class="pie-cols">
+        <div>
+          <h2>Visita</h2>
+          <ul>
+            <li><a href="index.html#visita">Horario y cómo llegar</a></li>
+            <li><a href="exposiciones.html#agenda">Visitas guiadas</a></li>
+            <li><a href="exposiciones.html">Exposiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Colección</h2>
+          <ul>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="artistas.html">Artistas</a></li>
+            <li><a href="contacto.html#formulario">Comprar o vender</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Información</h2>
+          <ul>
+            <li><a href="contacto.html#privacidad">Aviso de privacidad</a></li>
+            <li><a href="galeria.html#creditos">Créditos de imágenes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <form class="boletin" action="#" method="post">
+        <label for="boletin-correo">Recibe el boletín mensual de exposiciones</label>
+        <div class="boletin-fila">
+          <input type="email" id="boletin-correo" name="boletin-correo" autocomplete="email" placeholder="nombre@correo.cl" required>
+          <button class="boton" type="submit">Suscribirme</button>
+        </div>
+        <p class="chico">Un correo al mes y te das de baja cuando quieras. Lee el <a href="contacto.html#privacidad">aviso de privacidad</a>.</p>
+      </form>
+    </div>
+    <div class="pie-legal">
+      <p>© 2026 Galería Aurora. Las obras reproducidas en este sitio son de dominio público.</p>
+      <a href="#arriba">Volver arriba</a>
+    </div>
   </footer>
 </body>
 </html>

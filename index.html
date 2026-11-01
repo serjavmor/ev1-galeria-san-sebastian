@@ -3,53 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería Aurora, galería de pintura chilena en Valparaíso. Exposición actual: La bahía pintada, con obras de Somerscales, Helsby y Juan Francisco González.">
   <title>Galería Aurora | Inicio</title>
+  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <h1>Galería Aurora</h1>
-    <p class="lema">Arte que se mira de cerca</p>
-    <nav>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra" id="arriba">
+    <a class="marca" href="index.html">Galería Aurora</a>
+    <nav aria-label="Menú principal">
       <ul>
         <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="galeria.html">Galería</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="exposiciones.html">Exposiciones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Quiénes somos</h2>
-      <p>
-        Galería Aurora es una galería de arte en línea que nació en Valparaíso con una idea simple:
-        que cualquier persona pueda conocer, consultar y comprar obras de arte sin tener que viajar
-        a un museo. Reunimos pinturas clásicas y obras de artistas actuales, y las mostramos con
-        información clara sobre su autor, su época y su técnica.
-      </p>
+  <main id="contenido">
+    <!-- Portada: la exposición actual responde qué, cuándo y dónde -->
+    <section class="portada grid" aria-labelledby="titulo-portada">
+      <img class="portada-chica" src="img/gonzalez-valparaiso.jpg" width="800" height="416"
+        alt="Valparaíso, de Juan Francisco González: la bahía en calma con veleros anclados frente a los cerros, en tonos claros de rosa y gris">
+      <h1 id="titulo-portada">
+        <span class="linea"><span>La bahía</span></span>
+        <span class="linea linea-2"><span>pintada</span></span>
+      </h1>
+      <img class="portada-alta" src="img/helsby-paseo-atkinson.jpg" width="1200" height="900"
+        alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
+      <div class="portada-texto">
+        <p class="portada-fecha">6 de noviembre de 2026 al 31 de enero de 2027</p>
+        <p>Valparaíso visto por Thomas Somerscales, Alfredo Helsby y Juan Francisco González. En Avenida Brasil 1250, con entrada liberada.</p>
+        <a class="boton" href="#visita">Planifica tu visita</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Qué ofrecemos</h2>
-      <ul>
-        <li>Una colección de obras para recorrer desde el computador o el celular.</li>
-        <li>Asesoría para comprar o vender obras de arte.</li>
-        <li>Respuestas a consultas sobre autores, técnicas y conservación.</li>
+    <!-- Quiénes somos -->
+    <section class="intro entra" aria-labelledby="quienes">
+      <h2 id="quienes">Frente a la bahía</h2>
+      <div class="intro-cuerpo">
+        <p>
+          Galería Aurora nació en Valparaíso para mostrar la pintura chilena que se hizo mirando este puerto.
+          Exponemos, compramos y vendemos obras de artistas chilenos de 1870 a 1930, y acompañamos a quien
+          quiere empezar una colección o encontrarle un nuevo hogar a un cuadro de familia.
+        </p>
+        <ul class="intro-notas">
+          <li>Abierto de martes a sábado, con entrada liberada.</li>
+          <li>Diez obras en sala, de nueve artistas chilenos.</li>
+        </ul>
+      </div>
+      <figure class="panorama">
+        <img src="img/somerscales-valparaiso.jpg" width="1200" height="766" loading="lazy"
+          alt="Valparaíso, de Thomas Somerscales: vista desde los cerros al atardecer, con la ciudad y los barcos de la bahía bajo una cordillera rosada">
+        <figcaption>Thomas Somerscales, Valparaíso, 1897. Óleo sobre tela.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Obras en sala -->
+    <section class="en-sala" aria-labelledby="titulo-sala">
+      <div class="grid entra">
+        <h2 id="titulo-sala">Obras en sala</h2>
+      </div>
+      <ul class="banda">
+        <li>
+          <a href="galeria.html#lo-contador">
+            <img src="img/valenzuela-llanos-lo-contador.jpg" width="652" height="365" loading="lazy"
+              alt="Paisaje de Lo Contador, de Alberto Valenzuela Llanos: árboles frondosos sobre un prado verde bajo un cielo nublado">
+          </a>
+          <p class="banda-titulo" aria-hidden="true">Paisaje de Lo Contador, Valenzuela Llanos</p>
+        </li>
+        <li>
+          <a href="galeria.html#bordadora">
+            <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
+              alt="La bordadora, de Magdalena Mira: una joven de vestido blanco, sentada de perfil, borda una tela negra con flores">
+          </a>
+        </li>
+        <li>
+          <a href="galeria.html#canteros">
+            <img src="img/lira-los-canteros.jpg" width="1070" height="646" loading="lazy"
+              alt="Los canteros, de Pedro Lira: hombres mueven bloques de piedra con una carretilla y una palanca junto a un muro, bajo el sol">
+          </a>
+        </li>
+        <li>
+          <a href="galeria.html#uvas">
+            <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
+              alt="Uvas, de Celia Castro: un racimo de uvas negras cuelga de una parra entre hojas verdes">
+          </a>
+        </li>
+      </ul>
+      <p class="banda-pie">Cuatro de las diez obras en sala. <a href="galeria.html">Recorre la colección completa</a>.</p>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios grid entra" aria-labelledby="titulo-servicios">
+      <h2 id="titulo-servicios">Comprar, vender y cuidar una obra</h2>
+      <img class="servicios-foto" src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+        alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+      <p class="servicios-rotulo">Servicios</p>
+      <ul class="filas">
+        <li><span class="tipo">Compra</span><span>Obras en sala y en bodega</span><span class="valor">Previa cita</span></li>
+        <li><span class="tipo">Venta</span><span>Consignación de pintura chilena</span><span class="valor">Tasación sin costo</span></li>
+        <li><span class="tipo">Tasación</span><span>Informe para seguros y herencias</span><span class="valor">5 días hábiles</span></li>
+        <li><span class="tipo">Asesoría</span><span>Empezar u ordenar una colección</span><span class="valor">Previa cita</span></li>
+        <li><span class="tipo">Visitas</span><span>Recorrido guiado por la exposición</span><span class="valor">Sábados 12:00</span></li>
+        <li><span class="tipo">Colegios</span><span>Mediación para cursos</span><span class="valor">Martes a viernes</span></li>
+        <li><span class="tipo">Cuidado</span><span>Derivación a talleres de restauración</span><span class="valor"><a href="contacto.html">Consultar</a></span></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Visítanos</h2>
-      <p>
-        Recorre nuestra <a href="galeria.html">galería</a> o escríbenos desde la página de
-        <a href="contacto.html">contacto</a> si quieres comprar, vender o hacer una consulta.
-      </p>
+    <!-- Visita -->
+    <section class="visita grid entra" id="visita" aria-labelledby="titulo-visita">
+      <h2 id="titulo-visita">Cómo visitarnos</h2>
+      <p class="visita-lead">Estamos en el plan de Valparaíso. La entrada es liberada y no necesitas reservar, salvo para grupos de más de diez personas.</p>
+      <figure class="visita-foto">
+        <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
+          alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
+        <p>Después de la visita, sube por el ascensor Concepción hasta el paseo Atkinson, el mismo que pintó Alfredo Helsby en 1896.</p>
+      </figure>
+      <div class="visita-lado">
+        <div class="mapa">
+          <svg viewBox="0 0 400 320" role="img" aria-labelledby="mapa-titulo">
+            <title id="mapa-titulo">Mapa simple de la bahía de Valparaíso con la ubicación de la galería en el plan</title>
+            <path d="M0 320 L0 150 C40 140 70 170 110 190 C160 215 230 215 290 180 C330 155 360 110 400 95 L400 320 Z" fill="#f4d96c"/>
+            <circle cx="205" cy="238" r="10" fill="#133621"/>
+            <text x="120" y="110" fill="#f4d96c" font-size="22" font-family="Sentient, Georgia, serif">Bahía de Valparaíso</text>
+          </svg>
+        </div>
+        <dl class="datos">
+          <div>
+            <dt>Dirección</dt>
+            <dd>Avenida Brasil 1250, Valparaíso</dd>
+          </div>
+          <div>
+            <dt>Horario</dt>
+            <dd>Martes a sábado, 10:30 a 19:00</dd>
+          </div>
+          <div>
+            <dt>Entrada</dt>
+            <dd>Liberada</dd>
+          </div>
+          <div>
+            <dt>Cerrado</dt>
+            <dd>Domingo, lunes y festivos</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Cierre con contacto -->
+    <section class="cierre grid entra" aria-label="Contacto rápido">
+      <p class="cierre-frase">¿Quieres comprar, vender o tasar una obra? Te respondemos en dos días hábiles.</p>
+      <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
+        alt="Detalle de La bordadora, de Magdalena Mira">
+      <div class="cierre-enlaces">
+        <p>¿Prefieres hablar con nosotros?</p>
+        <a href="contacto.html#formulario">Escribir por el formulario</a><br>
+        <a href="tel:+56322345678">Llamar al +56 32 234 5678</a>
+        <p class="chico">Valparaíso, Chile. Respondemos en 48 horas hábiles.</p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Galería Aurora · Valparaíso, Chile</p>
+  <footer class="pie">
+    <p class="pie-nombre">Galería Aurora</p>
+    <div class="pie-fila">
+      <address class="pie-lugares">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Brasil+1250+Valparaiso">Avenida Brasil 1250, Valparaíso</a><br>
+        <a href="tel:+56322345678">+56 32 234 5678</a><br>
+        <a href="mailto:contacto@galeriaaurora.cl">contacto@galeriaaurora.cl</a>
+      </address>
+      <div class="pie-cols">
+        <div>
+          <h2>Visita</h2>
+          <ul>
+            <li><a href="index.html#visita">Horario y cómo llegar</a></li>
+            <li><a href="exposiciones.html#agenda">Visitas guiadas</a></li>
+            <li><a href="exposiciones.html">Exposiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Colección</h2>
+          <ul>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="artistas.html">Artistas</a></li>
+            <li><a href="contacto.html#formulario">Comprar o vender</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Información</h2>
+          <ul>
+            <li><a href="contacto.html#privacidad">Aviso de privacidad</a></li>
+            <li><a href="galeria.html#creditos">Créditos de imágenes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <form class="boletin" action="#" method="post">
+        <label for="boletin-correo">Recibe el boletín mensual de exposiciones</label>
+        <div class="boletin-fila">
+          <input type="email" id="boletin-correo" name="boletin-correo" autocomplete="email" placeholder="nombre@correo.cl" required>
+          <button class="boton" type="submit">Suscribirme</button>
+        </div>
+        <p class="chico">Un correo al mes y te das de baja cuando quieras. Lee el <a href="contacto.html#privacidad">aviso de privacidad</a>.</p>
+      </form>
+    </div>
+    <div class="pie-legal">
+      <p>© 2026 Galería Aurora. Las obras reproducidas en este sitio son de dominio público.</p>
+      <a href="#arriba">Volver arriba</a>
+    </div>
   </footer>
 </body>
 </html>

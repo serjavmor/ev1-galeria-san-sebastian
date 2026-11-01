@@ -3,48 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Colección de Galería Aurora: diez pinturas chilenas de 1870 a 1930, de Somerscales, Helsby, González, Lira, Valenzuela Puelma, las hermanas Mira y Celia Castro.">
   <title>Galería Aurora | Galería</title>
+  <link rel="preload" href="fuentes/sentient-300.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <h1>Galería Aurora</h1>
-    <p class="lema">Arte que se mira de cerca</p>
-    <nav>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="barra" id="arriba">
+    <a class="marca" href="index.html">Galería Aurora</a>
+    <nav aria-label="Menú principal">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="galeria.html" aria-current="page">Galería</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="exposiciones.html">Exposiciones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h2>Nuestra colección</h2>
-    <p>Una selección de obras de distintas épocas y estilos. Todas las imágenes son de dominio público.</p>
+  <main id="contenido">
+    <section class="cabecera grid entra" aria-labelledby="titulo-galeria">
+      <h1 id="titulo-galeria">La colección</h1>
+      <p>Diez pinturas chilenas de 1870 a 1930, ordenadas en tres salas: la bahía, las figuras y la naturaleza. Todas se pueden ver en Avenida Brasil 1250.</p>
+    </section>
 
-    <div class="obras">
-      <figure>
-        <img src="img/noche-estrellada.jpg" alt="La noche estrellada, de Vincent van Gogh: cielo nocturno con remolinos azules, estrellas brillantes y un pueblo dormido bajo un ciprés oscuro">
-        <figcaption>La noche estrellada · Vincent van Gogh · 1889</figcaption>
+    <section class="sala grid entra" aria-label="Obras de la colección">
+      <h2>La bahía</h2>
+
+      <figure class="obra obra-ancha" id="somerscales">
+        <img src="img/somerscales-valparaiso.jpg" width="1200" height="766"
+          alt="Valparaíso, de Thomas Somerscales: vista desde los cerros al atardecer, con la ciudad y los barcos de la bahía bajo una cordillera rosada">
+        <figcaption>
+          <strong>Valparaíso</strong>
+          Thomas Somerscales · 1897 · Óleo sobre tela
+        </figcaption>
       </figure>
-      <figure>
-        <img src="img/gran-ola.jpg" alt="La gran ola de Kanagawa, de Hokusai: una ola gigante de espuma blanca a punto de caer sobre tres botes, con el monte Fuji al fondo">
-        <figcaption>La gran ola de Kanagawa · Katsushika Hokusai · 1831</figcaption>
+
+      <figure class="obra obra-a vertical" id="paseo-atkinson">
+        <img src="img/helsby-paseo-atkinson.jpg" width="1200" height="900" loading="lazy"
+          alt="El paseo Atkinson, de Alfredo Helsby: una niña de vestido blanco juega con un aro en un paseo soleado con baranda de fierro y la bahía al fondo">
+        <figcaption>
+          <strong>El paseo Atkinson</strong>
+          Alfredo Helsby · 1896 · Óleo sobre tela
+        </figcaption>
       </figure>
-      <figure>
-        <img src="img/joven-perla.jpg" alt="La joven de la perla, de Johannes Vermeer: retrato de una muchacha con turbante azul y amarillo que mira sobre su hombro y lleva un aro de perla">
-        <figcaption>La joven de la perla · Johannes Vermeer · 1665</figcaption>
+
+      <figure class="obra obra-b horizontal" id="marina">
+        <img src="img/valenzuela-llanos-marina.jpg" width="868" height="595" loading="lazy"
+          alt="Marina de Valparaíso, de Alberto Valenzuela Llanos: rocas grises y rosadas en la orilla, olas y un velero en el mar azul">
+        <figcaption>
+          <strong>Marina de Valparaíso</strong>
+          Alberto Valenzuela Llanos · antes de 1925 · Óleo sobre tela
+        </figcaption>
       </figure>
-      <figure>
-        <img src="img/nenufares.jpg" alt="Nenúfares, de Claude Monet: estanque de agua verde y azul cubierto de hojas y flores de nenúfar">
-        <figcaption>Nenúfares · Claude Monet · 1906</figcaption>
+
+      <figure class="obra obra-c horizontal" id="valparaiso-gonzalez">
+        <img src="img/gonzalez-valparaiso.jpg" width="800" height="416" loading="lazy"
+          alt="Valparaíso, de Juan Francisco González: la bahía en calma con veleros anclados frente a los cerros, en tonos claros de rosa y gris">
+        <figcaption>
+          <strong>Valparaíso</strong>
+          Juan Francisco González · antes de 1933 · Óleo
+        </figcaption>
       </figure>
-    </div>
+
+      <h2>Las figuras</h2>
+
+      <figure class="obra obra-a vertical" id="sevillana">
+        <img src="img/valenzuela-puelma-sevillana.jpg" width="522" height="720" loading="lazy"
+          alt="La sevillana, de Alfredo Valenzuela Puelma: una mujer de cabello negro con un chal rojo, sentada de perfil, mira hacia arriba con un abanico en la mano">
+        <figcaption>
+          <strong>La sevillana</strong>
+          Alfredo Valenzuela Puelma · 1890 · Óleo sobre tela
+        </figcaption>
+      </figure>
+
+      <figure class="obra obra-b horizontal" id="canteros">
+        <img src="img/lira-los-canteros.jpg" width="1070" height="646" loading="lazy"
+          alt="Los canteros, de Pedro Lira: hombres mueven bloques de piedra con una carretilla y una palanca junto a un muro, bajo el sol">
+        <figcaption>
+          <strong>Los canteros</strong>
+          Pedro Lira · sin fecha · Óleo sobre tela
+        </figcaption>
+      </figure>
+
+      <figure class="obra obra-c vertical" id="bordadora">
+        <img src="img/magdalena-mira-bordadora.jpg" width="445" height="650" loading="lazy"
+          alt="La bordadora, de Magdalena Mira: una joven de vestido blanco, sentada de perfil, borda una tela negra con flores en un salón con velas y rosas">
+        <figcaption>
+          <strong>La bordadora</strong>
+          Magdalena Mira · antes de 1930 · Óleo sobre tela
+        </figcaption>
+      </figure>
+
+      <h2>La naturaleza</h2>
+
+      <figure class="obra obra-d vertical" id="uvas">
+        <img src="img/celia-castro-uvas.jpg" width="615" height="800" loading="lazy"
+          alt="Uvas, de Celia Castro: un racimo de uvas negras cuelga de una parra entre hojas verdes">
+        <figcaption>
+          <strong>Uvas</strong>
+          Celia Castro · antes de 1930 · Óleo
+        </figcaption>
+      </figure>
+
+      <figure class="obra obra-c horizontal" id="lo-contador">
+        <img src="img/valenzuela-llanos-lo-contador.jpg" width="652" height="365" loading="lazy"
+          alt="Paisaje de Lo Contador, de Alberto Valenzuela Llanos: árboles frondosos sobre un prado verde bajo un cielo nublado">
+        <figcaption>
+          <strong>Paisaje de Lo Contador</strong>
+          Alberto Valenzuela Llanos · sin fecha · Óleo
+        </figcaption>
+      </figure>
+
+      <figure class="obra obra-b vertical" id="rosas">
+        <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+          alt="Rosas y campánulas, de Aurora Mira: un ramo de rosas rosadas y rojas con campánulas lilas sobre un fondo oscuro">
+        <figcaption>
+          <strong>Rosas y campánulas</strong>
+          Aurora Mira · sin fecha · Óleo sobre tela, 53 × 38 cm
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="cierre grid entra" aria-label="Consultas por obras">
+      <p class="cierre-frase">¿Te interesa una obra? Pregunta por su disponibilidad y precio con IVA incluido.</p>
+      <img src="img/aurora-mira-rosas.jpg" width="900" height="1287" loading="lazy"
+        alt="Detalle de Rosas y campánulas, de Aurora Mira">
+      <div class="cierre-enlaces">
+        <p>Te ayudamos a elegir</p>
+        <a href="contacto.html#formulario">Escribir por el formulario</a><br>
+        <a href="tel:+56322345678">Llamar al +56 32 234 5678</a>
+        <p class="chico">Respondemos en 48 horas hábiles.</p>
+      </div>
+    </section>
+
+    <section class="creditos grid" id="creditos" aria-labelledby="titulo-creditos">
+      <h2 id="titulo-creditos">Créditos de imágenes</h2>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Valpara%C3%ADso_by_Thomas_Jacques_Somerscales,_1897.jpg">Somerscales, Valparaíso</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Helsby,_Alfredo_-_El_Paseo_Atkinson_1896.jpg">Helsby, El paseo Atkinson</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Valenzuela_Llanos,_Alberto_-_Marina_de_Valparaiso_-ost_MMBAV_fRF_01.jpg">Valenzuela Llanos, Marina de Valparaíso</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Gonzalez,_Juan_Francisco_-_Valparaiso-colMacK_web.jpg">González, Valparaíso</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:La_Sevillana_(1890)_-_Alfredo_Valenzuela_Puelma_(National_Museum_of_Fine_Arts,_Santiago_de_Chile).jpg">Valenzuela Puelma, La sevillana</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Los_Canteros,_Oleo_sobre_tela,_autor_Pedro_Lira_Rencoret_-_A740339_copia.jpg">Lira, Los canteros</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Magdalena_Mira_-_La_brodeuse.jpg">Magdalena Mira, La bordadora</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Castro,_Celia_-_Uvas_-osm_MMBAV_fRF_03_framed.jpg">Celia Castro, Uvas</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Alberto_Valenzuela_Llanos_-_Paisaje_(Lo_contador).jpg">Valenzuela Llanos, Paisaje de Lo Contador</a>. Wikimedia Commons, dominio público.</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Aurora_Mira_Mena_Rosas_y_camp%C3%A1nulas.jpg">Aurora Mira, Rosas y campánulas</a>. Wikimedia Commons, dominio público.</li>
+      </ul>
+    </section>
   </main>
 
-  <footer>
-    <p>Galería Aurora · Valparaíso, Chile</p>
+  <footer class="pie">
+    <p class="pie-nombre">Galería Aurora</p>
+    <div class="pie-fila">
+      <address class="pie-lugares">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Brasil+1250+Valparaiso">Avenida Brasil 1250, Valparaíso</a><br>
+        <a href="tel:+56322345678">+56 32 234 5678</a><br>
+        <a href="mailto:contacto@galeriaaurora.cl">contacto@galeriaaurora.cl</a>
+      </address>
+      <div class="pie-cols">
+        <div>
+          <h2>Visita</h2>
+          <ul>
+            <li><a href="index.html#visita">Horario y cómo llegar</a></li>
+            <li><a href="exposiciones.html#agenda">Visitas guiadas</a></li>
+            <li><a href="exposiciones.html">Exposiciones</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Colección</h2>
+          <ul>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="artistas.html">Artistas</a></li>
+            <li><a href="contacto.html#formulario">Comprar o vender</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Información</h2>
+          <ul>
+            <li><a href="contacto.html#privacidad">Aviso de privacidad</a></li>
+            <li><a href="galeria.html#creditos">Créditos de imágenes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <form class="boletin" action="#" method="post">
+        <label for="boletin-correo">Recibe el boletín mensual de exposiciones</label>
+        <div class="boletin-fila">
+          <input type="email" id="boletin-correo" name="boletin-correo" autocomplete="email" placeholder="nombre@correo.cl" required>
+          <button class="boton" type="submit">Suscribirme</button>
+        </div>
+        <p class="chico">Un correo al mes y te das de baja cuando quieras. Lee el <a href="contacto.html#privacidad">aviso de privacidad</a>.</p>
+      </form>
+    </div>
+    <div class="pie-legal">
+      <p>© 2026 Galería Aurora. Las obras reproducidas en este sitio son de dominio público.</p>
+      <a href="#arriba">Volver arriba</a>
+    </div>
   </footer>
 </body>
 </html>
